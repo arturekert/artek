@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merton presentations — Artur Ekert</title>
+  <meta name="description" content="Second-year physics presentation course at Merton College, Oxford, with an archive of past talks and abstracts.">
+  <meta name="author" content="Artur Ekert">
+  <meta property="og:title" content="Merton presentations — Artur Ekert">
+  <meta property="og:description" content="Second-year physics presentation course at Merton College, Oxford, with an archive of past talks and abstracts.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">Artur&nbsp;Ekert</a>
+    <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="lectures.html">Lectures</a>
+        <a href="tutorials.html" aria-current="page">Tutorials</a>
+        <a href="writings.html">Writings</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section>
+  <p class="kicker">Merton College</p>
+  <h1 class="page-title">Merton presentations</h1>
+  <hr class="rule">
+
+  <div class="split" style="grid-template-columns: minmax(0,1.4fr) minmax(0,1fr)">
+    <div class="justify">
+      <p>Dear Second Year Physicists,</p>
+      <p>As part of your practical work for this year, you are supposed to give a brief talk (maximum 20 minutes, including questions) on a subject of your choice. You organise and run the show, and I listen, comment, evaluate, and (hopefully) enjoy the performance. Here is, roughly, how it works.</p>
+      <p>You can talk just about anything, as long as it is interesting. I do not have any specific suggestions — just google “physics breakthrough of the year” or the like, and see what you get. For guidance on style and delivery, take a look at <a href="https://www.ted.com/">TED</a>. You can also check who talked about what in the past, in the <a href="#archive">archive below</a>.</p>
+      <p style="margin:0">Looking forward to seeing you soon. <em>Artur</em></p>
+    </div>
+    <blockquote class="pull">Essentially, anything that will keep me and others awake for fifteen to twenty minutes is fine. It does not have to be physics. I welcome any wacky topics.</blockquote>
+  </div>
+
+  <h2 class="label">How the term runs</h2>
+  <ol class="ruled">
+    <li class="row3 wide"><span class="when">Week 4</span><span><span class="t22">Choose your topic</span><span class="where">By the end of the fourth week</span></span><span class="small">Let me know your choice by the end of the 4th week; I expect an email from you with a title and an abstract of your talk, and I&#x27;ll get back to you with some comments.</span></li>
+    <li class="row3 wide"><span class="when">Week 6</span><span><span class="t22">Rehearsals</span><span class="where">Thursday 14:00–18:00, Mure Room</span></span><span class="small">Try your oratorical skills on me. Call it a rehearsal session, if you wish. I will ask you to go through your presentation, after which we will discuss ways of improving it.</span></li>
+    <li class="row3 wide"><span class="when">Week 8</span><span><span class="t22">The Grand Finale</span><span class="where">Monday 16:00–20:00, Ian Taylor Room</span></span><span class="small">You should all show up. Feel free to invite your friends and colleagues. First Year Physicists are in particular welcome.</span></li>
+  </ol>
+
+  <h2 class="section-title">This year’s talks</h2>
+  <ol class="ruled">
+    <li class="talk">
+      <div><h3>Limit Cycles: Why Nature Loves Repetition</h3><span class="who">Paulius Kalinauskas</span></div>
+      <p class="abstract justify">Many systems found in our world exhibit stable, repeating behaviour, from the rhythm of the human heart to oscillations in ecological populations and neural networks. These phenomena are often governed by mathematical structures known as limit cycles. In this talk, I introduce the concept of limit cycles within dynamical systems and explore how they provide a unifying framework for understanding such behaviour across disciplines. I will examine limit cycles in biology, physics, and even sports, to demonstrate how these mathematical objects show up in seemingly unrelated complex systems.</p>
+    </li>
+    <li class="talk">
+      <div><h3>Modelling Disinformation through Statistical Mechanics</h3><span class="who">Ethan Kelvin</span></div>
+      <p class="abstract justify">I will aim to present a view of how to model disinformation within society using methods from statistical mechanics - specifically, the Mean Field Approach. I will begin by explaining what disinformation is and the harmful effects it can have on wider society. I will then briefly discuss earlier models of disinformation from epidemiology, before beginning a more advanced discussion, explaining the mathematics of a different statistical approach. I will then comment on the effectiveness of this model, what needs to be done to improve and validate it, and any insights we can gain about how to effectively combat this issue.</p>
+    </li>
+    <li class="talk">
+      <div><h3>Discrete Calculus and Differential Equations</h3><span class="who">Sebastian Maslanek</span></div>
+      <p class="abstract justify">I will look into the world of discrete analogues of calculus and differential equations. I will start by looking into umbral calculus, its rules, and its interesting relation to real calculus that we are used to. Then I will use these ideas to solve the discrete version of differential equations - recurrence relations. I will then be able to make and solve the discrete versions of all of our favourite differential equations.</p>
+    </li>
+    <li class="talk">
+      <div><h3>From Pollen to Pixels: A Kinetic-Theory Intuition for Diffusion Models and Image Generation</h3><span class="who">Sophie Neville</span></div>
+      <p class="abstract justify">Brownian motion is a classic example of microscopic randomness, so it is an unexpected place to look for the logic behind modern image generation. Diffusion models sit behind a large fraction of the generative AI people now see day to day: they create images from text prompts, edit images by filling in missing regions, and clean up noisy data. This talk will outline how diffusion models deliberately wash out structure by gradually adding noise until images become statistically simple, then explain what changes in the reverse direction: not a violation of thermodynamics, but the injection of learned information. I will describe how a neural network is trained to provide small, noise-dependent corrections that steer each step back toward realistic images, turning an irreversible-looking diffusion process into a practical generative method. I will finish by briefly discussing why the same framework is useful beyond making pictures, including scientific reconstruction problems where you want plausible solutions consistent with noisy, partial measurements.</p>
+    </li>
+    <li class="talk">
+      <div><h3>Guidance, control and reaching orbit</h3><span class="who">Deevam Sharma</span></div>
+      <p class="abstract justify">How does a rocket get its payload to orbit? In this talk, I will explain the principles of the systems that calculate and correct the trajectories of rockets and introduce the mathematics of guidance laws and feedback control. The talk will follow a historical development beginning with early ICBMs in the 1950s up to the modern algorithms on the Space Shuttle, showing how the implementation of these algorithms subject to the technical constraints of the time influenced their development.</p>
+    </li>
+    <li class="talk">
+      <div><h3>Between a Rock and a Hard Place: the Physics of Curling</h3><span class="who">Tabitha Shearer</span></div>
+      <p class="abstract justify">The sport of curling has been around for hundreds of years and has confused scientists for just as long, with still no consensus on how the action of curling occurs. In this talk I will provide a brief introduction to the sport and explain how experimental observations of curling motion cannot be explained by simple symmetric friction models. I will then present the leading competing theories on the motion of curling rocks and evaluate which description best matches the real world.</p>
+    </li>
+    <li class="talk">
+      <div><h3>A Numerical Algorithm for Solving Leaky Waveguide Modes</h3><span class="who">Haotian Wang</span></div>
+      <p class="abstract justify">Leaky modes determine radiation loss and effective interaction length in plasma waveguides used for laser–plasma accelerators and compact light sources. These modes are characterized by complex propagation constants, whose imaginary part quantifies attenuation, yet computing them in realistic waveguides with arbitrary refractive index profiles remains a challenging open-boundary eigenvalue problem. In this work, we develop a robust numerical framework that solves the radial wave equation using the high-accuracy Numerov method and enforces the leaky-mode radiation condition through a two-dimensional search in the complex propagation-constant plane, combining coarse scanning with Nelder–Mead optimization to efficiently locate the complex roots. The results agree well with published data, and additional physical verification confirms the reliability of the approach, providing a practical tool for analyzing and optimizing open plasma waveguide systems.</p>
+    </li>
+    <li class="talk">
+      <div><h3>The Cosmic Distance Ladder</h3><span class="who">Eleanor Wheeler</span></div>
+      <p class="abstract justify">How do we measure distance without rulers or maps? In this talk I will explain the construction of the cosmic distance ladder, the chain of methods astronomers use to calculate the distances to celestial objects. I will discuss the calibration of ‘standard candles’, how errors propagate through the ladder, and why accurate distance measurements are crucial to our understanding of cosmology.</p>
+    </li>
+    <li class="talk">
+      <div><h3>Geometrical and Dynamical Approaches to Special Relativity</h3><span class="who">Noah Yudkin</span></div>
+      <p class="abstract justify">In this talk I will introduce physicists to the philosophy of special relativity, motivate the importance of the debate between the geometrical and dynamical approaches, and discuss the arguments on both sides. I will address the lack of clarity in the literature and argue that a geometrical approach serves not just philosophy but also physics.</p>
+    </li>
+  </ol>
+
+  <div class="split narrow-first">
+    <div>
+      <h2 class="label">Departmental mark scheme</h2>
+      <table class="marks">
+        <tr><td>70%+</td><td>1st class</td></tr>
+        <tr><td>60–69%</td><td>2.1</td></tr>
+        <tr><td>50–59%</td><td>2.2</td></tr>
+        <tr><td>40–49%</td><td>3rd class</td></tr>
+        <tr><td>30–39%</td><td>Pass</td></tr>
+        <tr><td>&lt;30%</td><td>Fail</td></tr>
+      </table>
+    </div>
+    <p class="small justify" style="font-size:16px; line-height:1.7; margin:0">Individual talks are marked as a percentage using the University’s USM scale. The majority of presentation talks should be marked in the range 60–75%, with any competent talk receiving a mark of at least 60% and any good talk receiving a mark of at least 70%. Higher or lower marks can be awarded for particularly strong or weak talks, but marks below 50% should only be awarded where the student has made little or no serious attempt, and marks above 85% should only be awarded for quite exceptional talks.</p>
+  </div>
+
+  <h2 class="section-title" id="archive" style="margin-bottom: var(--s4)">Previous talks archive</h2>
+  <p style="font-size:16px; color: var(--muted); margin-bottom: var(--s6)">Choose a year to read the talks and their abstracts.</p>
+  <div class="archive">
+    <details>
+      <summary><span class="year">2025</span><span><span class="count">5 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>AI and Climate Solutions: Potentials and Risks</h3><span class="who">Eleanor Clarice Hamilton Clark</span></div>
+          <p class="abstract justify">2024 was the year we exceeded 1.5°C global warming, the Paris Agreement target. Artificial Intelligence has the potential to help communities, businesses, and policymakers reduce the effects of climate change around the world. In this presentation I outline how AI is being used in climate research, monitoring greenhouse gas emissions, and optimising energy grids. In the context of net-zero transition, I will explain the potentials and risks of AI for climate solutions.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Math, myth, and the Mediterranean: how Italians shaped mathematics</h3><span class="who">Edwin De Nicolo</span></div>
+          <p class="abstract justify">Many of the greatest minds in mathematics, from Lagrange to Fibonacci and Galilei, had their roots in the Italian peninsula. In this talk I will investigate some of the monumental contributions made by these people, as well as a few infamous stories associated with their Medieval and Renaissance lives.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Machine Learning in Hydrodynamics</h3><span class="who">Elizabeth Norton</span></div>
+          <p class="abstract justify">This project used the MESHGRAPHNETS graph neural network architecture to train a model to produce simulations of simple fluid flows, fluid flow around a cylinder and the Sedov explosion, which could be compared with simulations produced by numerical methods. The presentation will discuss the architecture used and show some of the results produced, as well as wider applications of these techniques and areas of science they may be used in in future.</p>
+        </li>
+        <li class="talk">
+          <div><h3>A Stroke of Genius: Physics’ Role in Rowing</h3><span class="who">Daniel Orton</span></div>
+          <p class="abstract justify">Rowing is often seen as a test of strength, skill, or endurance, but it is, at its core, a sport governed by the laws of physics. This talk outlines the complex dynamic system of a racing rowing eight, exploring how the movement, power application, arrangement, and synchronisation of the eight rowers affects the hull speed and efficiency.</p>
+        </li>
+        <li class="talk">
+          <div><h3>How does scientific progress work?</h3><span class="who">Romee Tiffou</span></div>
+          <p class="abstract justify">David Hume realised nearly three hundred years ago that inductive inferences can simply not be made rationally. But without induction, how can science possibly proceed? From verification to falsification, from Kuhn’s theory of paradigms to Bayesian confirmation, I will outline how philosophers have attempted to deal with the problem of understanding science, and I will argue that we may not be able to find a rational basis for scientific progress at all.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2024</span><span><span class="count">7 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>The Rise of Witch Hunting in Europe</h3><span class="who">William Blakey</span></div>
+          <p class="abstract justify">During the dark ages, witch hunting in Christian Europe was banned by both secular laws and Catholic canon - to believe in witches was considered unchristian. By the 16th century these laws had been forgotten and reversed leading to large scale witch hunting in the 16th and 17th centuries. In this talk I will investigate how the intellectual foundations for witch hunting were constructed and what allowed these beliefs to drive the widescale persecution of “The Great Hunt.”</p>
+        </li>
+        <li class="talk">
+          <div><h3>Moire Physics</h3><span class="who">Barnaby Colvin</span></div>
+          <p class="abstract justify">Crystals made by overlaying graphene layers at a slight rotation to one another or with a slight lattice mismatch possess various interesting properties, including unexpected superconductivity. In this talk I will discuss the properties and synthesis of such moiré superlattices, and examine their potential applications.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Game theory in poker</h3><span class="who">Ivo Elgueta</span></div>
+          <p class="abstract justify">Poker is often portrayed to be a game of luck and strength of will, where a steely nerve is deemed more important than a strategic mind. However, poker is at its roots a decision-making game. In this talk I will discuss how game theory can be applied to poker, and whether human input can still be effective in a game governed by maths.</p>
+        </li>
+        <li class="talk">
+          <div><h3>A School Boy’s Guide to Building a Fusion Reactor</h3><span class="who">Marc Giroux</span></div>
+          <p class="abstract justify">With the construction of ITER nearing completion, we will soon be in a position to test the solutions and materials proposed by engineers and scientists around the world. Fusion reactors must accommodate for both the 150 million degree plasma and the 4 kelvin liquid helium in close proximity to one another. The complexity of sustaining fusion had led to the advancement of both Engineering and Materials Science. In this talk I will discuss what advancements have been made, what still needs to be solved and finally answer the question of “will we have fusion in the next 30 years?&quot;</p>
+        </li>
+        <li class="talk">
+          <div><h3>Galois theory</h3><span class="who">Matthew Harding</span></div>
+          <p class="abstract justify">Galois theory is a branch of mathematics which can be used to prove multiple interesting results such as that there is no solution in radicals for a general fifth order polynomial or that it is impossible to trisect an angle by describing these problems in terms of transformations on a field of numbers.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Investigating Survivorship Bias in the Formation of our Solar System</h3><span class="who">Louis Macro</span></div>
+          <p class="abstract justify">Ever since Nicolaus Copernicus first proposed the heliocentric model, resulting in the later formation of the Copernican Principle, there have been questions about how typical Earth and the Solar System are in our galaxy and universe and how likely we are to find life on other worlds. I will discuss how models of Solar System formation can be used in comparison to astronomical observations of extrasolar planetary systems to investigate a possible condition for the formation of intelligent life and where we should focus our efforts in our search for it.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Physics in Ancient China</h3><span class="who">Qianyu Wang</span></div>
+          <p class="abstract justify">The ancient Chinese exhibited forward-thinking vision and acumen in their observations of physical phenomena. Heliocentric models, adeptly accounting for lunar eclipses, surfaced 1400 years prior to Copernicus&#x27;s formulation of Heliocentrism. Moreover, explanations for camera obscura and the imaging of concave mirrors were advanced a century ahead of Euclidean geometric optics. It is noteworthy that Niels Bohr, acknowledging the philosophy of &#x27;opposites are complementary,&#x27; adorned taijitu on his coat upon receiving chivalry in 1947. Additionally, the application of empirical rules to fluid dynamics was a forte of ancient Chinese scholars. A 60-word mnemonic facilitated the maintenance of an irrigation system benefitting over 8000 square kilometers for 2200 years. In this presentation, I shall delve into the realm of ancient Chinese physics, offering a brief analysis of its developmental trajectory.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2023</span><span><span class="count">9 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>How Darwinism shaped everything around us: of human sensation, mind and society</h3><span class="who">Lilin Liu</span></div>
+          <p class="abstract justify">From the greatest scientists and philosophers to the common folks, everyone has more or less thought about the questions about the nature of us humans. What is the reason for us to have such emotions and desires, to have such senses and thoughts, and to have such ethnics and culture? Thankfully, the modern study of history, biology and social sciences are already providing us with a nice explanation of these topics. And thus, armed with these sources of knowledge, I will make a short demonstration about how we can deduce the behaviours of human beings in a variety of different aspects, simply based on the principles of Darwinism.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Feynman&#x27;s wobbling plate</h3><span class="who">Param Luhadiya</span></div>
+          <p class="abstract justify">The presentation will go through the derivation of Euler&#x27;s equations of motion and then using them to derive the relation between the rotating and wobbling frequencies.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Basic Neural Networks-how do machines learn?</h3><span class="who">Jonathan Rugg</span></div>
+          <p class="abstract justify">I will take a brief dive into neural networks, explaining their general structure using a simple example (handwritten number recognition), their uses and a bit more of the maths underlying how the learning process really works. My aim is to de bug a few machine learning myths and demonstrate that it is mostly calculus and linear algebra, not something mysterious! I also plan to take a look at how the way machines &#x27;learn&#x27; is different from what we might perhaps have expected.</p>
+        </li>
+        <li class="talk">
+          <div><h3>On anarchism</h3><span class="who">Safwan Elhaj-Houssen</span></div>
+          <p class="abstract"></p>
+        </li>
+        <li class="talk">
+          <div><h3>Understanding modern field hockey tactics through the lens of Game Theory</h3><span class="who">Euan Dyer</span></div>
+          <p class="abstract justify">With just the understanding of game theory and a knowledge of the rules of hockey it is possible to think up all the tactics currently being used by the best clubs and countries around the world. From aerials to zonal defences, I will discuss the tactics that teams use to win hockey matches, and describe how we can get to the same knowledge with the tools of game theory. making no assumptions that you know what either hockey or game theory is, I shall start with an explanation of both. If I do my job properly, by the end of my talk, you should have the building blocks to become a tactical mastermind. Hopefully I will have created the next Pep Guardiola of hockey.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Bellringing and Group Theory</h3><span class="who">Joseph Bell</span></div>
+          <p class="abstract justify">A typical Oxonian cannot help but be exposed to the melodious peals of English Bellringing, a practice which does not rely on the typical musical or lyrical conventions of other music-making, but rather permutative methods. In my presentation I will examine some of the work of an early pioneer of the so-called ‘method ringing’, Fabian Stedman, through the perspective of modern group theory.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Caffeine and energy drinks</h3><span class="who">Sumayyah Siddiqui</span></div>
+          <p class="abstract justify">A topic particularly relevant to myself and lots of university students - energy drinks and other sources of caffeine are often used to improve concentration and reduce tiredness. In my presentation I will look at how this works, the effects of caffeine on the body and brain, and what the effects are of prolonged, excessive consumption of energy drinks.</p>
+        </li>
+        <li class="talk">
+          <div><h3>A surprising connection between prime numbers and geometry</h3><span class="who">Louis Kemp</span></div>
+          <p class="abstract justify">Over 2000 years ago ancient Greek mathematicians wanted to know the answer to a seemingly straightforward question: “Which polygons can be constructed with a ruler and a compass?” This question remained unsolved for many years until a few brilliant insights by the mathematician Carl Friedrich Gauss led to a surprising result. During the talk, I will discuss the Greeks&#x27; achievements on this problem and their shortcomings. Then I will show how this problem of pure geometry can be transformed into an algebraic problem with a known solution in the most visual and hopefully intuitive way possible. This will involve us creating a new field and then trying to find out whether complex roots of a polynomial are members of this field. From this, it will turn out that a polygon can only be constructed if it has a number of sides equal to a product of Fermat primes and 2^n. A result which on first inspection is entirely unexpected.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Genetics of Intelligence</h3><span class="who">Camilo Mosquera</span></div>
+          <p class="abstract justify">What is commonly understood as &#x27;intelligence&#x27; is one the most important traits in determining the path of a person&#x27;s life. In fact, by some measures, intelligence is a better predictor of life outcomes than any other trait. But what exactly is intelligence? Who has it? And how did they get it? After giving a more precise definition of intelligence, we shall explore how scientists have sought to measure intelligence before looking at how recent developments in genetics (specifically genome-wide association studies) have allowed scientists to attribute to our DNA increasing responsibility for a person&#x27;s intelligence. We will end with a brief look at the significance of these results for modern society and how we choose to organise it.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2022</span><span><span class="count">4 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Non-Euclidean Geometry in Relativity</h3><span class="who">Theodor Iosif</span></div>
+          <p class="abstract justify">Non-euclidean geometry is the mathematics that analyses any space which does not obey the axioms of the standard, euclidian one. This implies an extraordinary difficulty in visualising such a geometry. A particular difficulty arises in Relativity, and the aim of this talk is to illustrate the peculiarity of spaces governed by the axioms of General Relativity, with the help of a rather uncommon, detailed example through which one can develop an intuition for this field – a rotating ring.</p>
+        </li>
+        <li class="talk">
+          <div><h3>To land Lyosha on Luna: the secret Soviet moon program</h3><span class="who">Nick Maslov</span></div>
+          <p class="abstract justify">While NASA directed its efforts at putting a man on the moon by the end of the decade, the Soviet Union didn&#x27;t even seem to be competing. But many years later, information declassified amid Gorbachev-era reforms revealed a colossal lunar program, which had been hastily dissolved and swept under the rug after several launch failures and the successful American moon landings. What would a crewed Soviet moon mission have looked like? And why did the USSR, with its huge initial lead in the conquest of space, lose the race to put a man on the moon? My talk will be an exploration of the little-known story of the Soviet lunar program: from the early probes swinging by the moon and the first pictures of its far side (a mission accidentally helped by an American cereal company), to the increasingly desperate attempts at a crewed flight and the final showdown between an American crew and a Soviet probe, as well as the immense technical challenges, personal and political conflicts, triumphs, explosions and tragedies faced along the way.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Role of Continuity in Topology</h3><span class="who">Agnieszka Wierzchucka</span></div>
+          <p class="abstract justify">Throughout a physicist&#x27;s undergraduate education, pure maths is often put together as ‘mathematical methods’ courses, rushing through the required maths, drowning the reader in definitions and theorems. This only makes your common physicist less willing to leave their protected non-rigorous bubble. In this presentation, I will change that by taking a visual tour of quite an abstract area of maths - topology. Brought to life by Euler, topology is very similar to playing with play-doh, as it studies structures preserved under deformations. I will begin my presentation with a reminder of what a continuous function is and why it should be generalised. Then, I will introduce the concept of topological spaces, and use the previously developed ideas of continuity to define topological invariants. For example connectedness, Hausdorffness and even some physical invariants. In the end, it will only seem natural that a coffee cup and doughnut are really the same thing.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Evolution of Car Engines in the Japanese Domestic Market</h3><span class="who">Michai Vasile</span></div>
+          <p class="abstract justify">Over the course of history, humans have been thinking of different ways to travel more efficiently. The most notable change in the way travel is perceived happened during the 20th century, when cars came into global use. They provided the average citizen with a reliable and exciting way of everyday transport. But the technological marvel also came with an economic downside, different in each part of the world. By the end of the 20th century, the Japanese government passed a road tax, which was greatly influenced by the engine displacement, making cars with bigger engines more expensive. In my presentation I will talk about how some Japanese car manufacturers worked their way around this road tax, by squeezing every last drop of power from low-displacement engines, and what innovative methods they used to do so.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2021</span><span><span class="count">8 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>An Introduction to Wakefield Acceleration</h3><span class="who">Alexander Christie</span></div>
+          <p class="abstract justify">In this talk I will briefly discuss how conventional particle accelerators work and their limitations. I will then look more deeply into the concept of wakefield acceleration as a method to accelerate electrons. I will show how this concept has the potential to revolutionize accelerator design but also how there are still many technological hurdles to overcome before this becomes reality.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Phylogenetics and the Evolution of Myths</h3><span class="who">Andrei-Alexandru Cristea</span></div>
+          <p class="abstract justify">A paramount idea in the study of biology is that of evolution and evolutionary relationships between biological entities. Phylogenetics is the science of inferring such relationships from the observance of heritable traits among individuals or populations. However, oral tradition is a powerful catalyst for cultural change, allowing or rather forcing myths and stories to suffer alterations in time similar to those of living beings. Thus, one can employ the tools provided by phylogenetics to study the evolutionary relationships between myths and their related forms, to reconstruct ancestral states and gain various historical or psychological insights from their analysis. In this talk, I will discuss the concept of mythemes and shed some light on the technical approach to comparative mythology provided by phylogeny.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Applications of Machine Learning and Neural Networks in Physics</h3><span class="who">Andrei-Horatiu Eftime</span></div>
+          <p class="abstract justify">Since its invention, traditional programming has aided the development of physics by allowing scientists to perform calculations and extract information from large sets of data. However, in recent years, Machine Learning Algorithms and Neural Networks became increasingly more popular in analysing data, because of their ability to find hidden dependencies that scientists weren&#x27;t even foreseeing. Nowadays, neural networks are present in all scales of physics, from quantum state tomographies to deduction of dark matter properties. In this talk, we are going to analyse some of these uses and speculate on the evolution of these techniques.</p>
+        </li>
+        <li class="talk">
+          <div><h3>A Second Look at the Twin Paradox</h3><span class="who">Megan Evans</span></div>
+          <p class="abstract justify">In free space, the stay-at-home twin who does not accelerate is the older, regardless of the path his brother takes. Once you have that, you can argue that the proper time - the time experienced by an individual doing the travelling - is longest for someone living in an inertial frame. Only, in the classical approximation for a free particle, maximizing proper time looks like the principle of least action we found in Newtonian mechanics. I will see if I can derive some of the consequences of this - including energy-momentum conjugates and what happens when you change to a non-inertial frame of reference.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Game Theory</h3><span class="who">William Isotta</span></div>
+          <p class="abstract justify">Game theory attempts to model the behaviour of interacting rational agents in order to predict the outcomes of games, and to quantify and optimise decision making. In this talk, we shall develop some of the basic concepts within non-cooperative game theory, and discuss their application to some simple games.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The thought that set the course of science in the Celestial Empire</h3><span class="who">Jeremi Litarowicz</span></div>
+          <p class="abstract justify">For almost two millennia the achievements of Imperial China outshone those of any other civilisation on earth, its command of nature exceeding anybody else&#x27;s by centuries - until it was swiftly outpaced by the mathematised science of the West. In this talk, I will examine the mathematical and philosophical realities that defined the initially successful relationship of Chinese culture to nature, and the political system that preserved this paradigm largely unchanged for 2000 years.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Barbour-Bertotti&#x27;s &#x27;Best-Matching&#x27;</h3><span class="who">Rishin Madan</span></div>
+          <p class="abstract justify">Newtonian mechanics, ever since it was presented in Newton&#x27;s magnum opus, Principia, has claim to being the most successful scientific theory in humanity&#x27;s history. Yet, since its inception, there have been those who disagree with Newton&#x27;s mechanics on a fundamental level, regarding the reference to unobservable spatial structure as inadmissible. This view was most prominently espoused by Gottfried Leibniz and Ernst Mach and is now known as relationalism. However, relationists had not been able to recover the empirical predictions of Newtonian mechanics with just relational distances, leaving them in need of recourse. That is, until 1982, when Julian Barbour and Bruno Bertotti developed their &#x27;best-matching&#x27; principle, recovering the same empirical predictions as that of Newtonian mechanics (with caveats), without appeal to absolute structure. In this talk, I will detail Barbour-Bertotti&#x27;s relational mechanics. I will then leave it to the audience to ponder the relevance and importance of this development.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Talent - We have no excuses</h3><span class="who">Benedict Yorston</span></div>
+          <p class="abstract justify">What links Mozart, Federer, and Polgár? A God given gift of superiority over us mere mortals, or something else? I will be questioning the very existence of talent in an examination of some of the most successful individuals in history, in an effort to discover what really made them so.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2020</span><span><span class="count">9 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>A 2D Simulation of the Moon&#x27;s Break-Up After a Mysterious Collision, Inspired by Neal Stephenson&#x27;s &quot;Seveneves&quot;</h3><span class="who">Miles Testa</span></div>
+          <p class="abstract justify">In this project, the author sets out to code a 2d simulation of the moon&#x27;s behaviour after an extremely dense unknown entity travelling at sub-relativistic speed crashes into it (as described in &quot;Seveneves&quot;). The simulation will essentially be an N-body inelastic collision simulation in the frame of the moon&#x27;s rotation about the earth. The process of creating the program will be discussed (algorithm choice, associated errors and overall structure of the code), followed by an interpretation of the results. It is hoped that the simulation will point towards the &quot;white sky&quot; phenomenon described in the aforementioned novel. At the end of the talk, a brief discussion of possible extensions of the simulation to 3 dimensions and/or accounting for the finer properties of the N-bodies.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Juggling Mathematics</h3><span class="who">Radoslaw Grabarczyk</span></div>
+          <p class="abstract justify">As a collection of perfectly timed throws at given heights, toss juggling inspired a combinatorial problem of finding all possible repeating patterns - juggling tricks - one can perform with a given number of hands and balls. First considered by Claude Shannon, the mathematical description of a juggler has since grown to the level of sophistication of modern discrete mathematics. In my talk, I will present both the theory and practice of juggling notation and basic theorems that follow from it.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Fields, Antiparticles and All That</h3><span class="who">Jan Siuta</span></div>
+          <p class="abstract justify">The 2 great pillars of modern physics are Relativity and Quantum Mechanics. They were wed together for the first time in 1928 by P.A.M. Dirac. Out of them comes out a beautiful union which forces upon us great changes in the way we perceive the world. In the talk I will present how the fundamental principles of the above 2 theories leads us, almost uniquely, to a theory of quantized fields. We shall see that Nature uses only the longest threads to weave her patterns, so each small piece of her fabric reveals the organization of the entire tapestry as evidenced in the prediction of existence of antimatter.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Lyndon B Johnson: Power, politics, and the race to space</h3><span class="who">Alexander Pett</span></div>
+          <p class="abstract justify">An exploration of the character of Lyndon B Johnson, a man who would ultimately have an immense impact on the allocation of scientific funds in the US, through his revolutionary and incredibly corrupt 1948 senate campaign.</p>
+        </li>
+        <li class="talk">
+          <div><h3>A survey of the general features and the history of cults</h3><span class="who">Robert Vickers</span></div>
+          <p class="abstract justify">How and when cults arise, how they recruit followers, how they maintain followers and survive in hostile countries and influence the countries in which they live. These points will be illustrated by example from the some notable cults from history e.g. Aum Shinrikyo, Heaven&#x27;s Gate and Scientology.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Coding a Brain</h3><span class="who">Nicholas Mitchell</span></div>
+          <p class="abstract justify">How do you programme a computer to learn? Many programming problems in pattern recognition can be solved by training an artificial neural network, rather than manually coding identification techniques ourselves. In this talk I hope to introduce the basis of a neural network to gain an understanding about how it works at a basic level, demonstrate some basic issues and solutions via simple examples as well as discuss more generally about them.</p>
+        </li>
+        <li class="talk">
+          <div><h3>An introduction to superconducting magnets</h3><span class="who">Marcell Szakaly</span></div>
+          <p class="abstract justify">Where and why do we use superconducting magnets, and what unique design challenges do they pose? In this talk I will give an introduction to the properties of superconductors, and to the design, construction and operation of superconducting magnets, illustrated by their use in the LHC. I will also show you what happens when things go wrong...</p>
+        </li>
+        <li class="talk">
+          <div><h3>The problem of induction</h3><span class="who">Lasse Wolff</span></div>
+          <p class="abstract justify">My presentation is about what is known as the problem of induction in philosophy. Inductive methods of inference are essential in science to the extent that all scientific theories are supported by induction. Two philosophical arguments - the old problem/riddle of induction and the new problem/riddle of induction are supposed to show that it is much harder than most people would expect, if not impossible, to formally justify inductive methods. If one accepts one of these arguments, then one has no more formal justification for believing inductive inferences than one has for believing inferences made from guessing. This seems to suggest that I am no more justified in believing that the kind food I have eaten my entire life will continue to be nourishing tomorrow than I am justified in believing that the same kind of food will be poisonous tomorrow...</p>
+        </li>
+        <li class="talk">
+          <div><h3>Transistors : Past, Present, and Future</h3><span class="who">Graham Matthews</span></div>
+          <p class="abstract justify">In the 1950s, the first transistor radios had less than 10 transistors, yet today several million could sit on a chip less than a micron wide. This presentation will discuss the invention of the transistor, the innovations which revolutionized their usage, and the future of the technology that defined the last half decade.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2019</span><span><span class="count">5 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Coriolis Force Elucidated</h3><span class="who">Richard Chatterjee</span></div>
+          <p class="abstract justify">Despite being a relatively simple concept, the Coriolis force is one of the most widely misunderstood and mischaracterised phenomena in Physics. In this talk, I will build up a clear understanding of the Coriolis force, overthrow surrounding prevalent misconceptions and discuss some of its many physical consequences, including in atmospheric circulation. Along the way there will be two insightful demonstrations, a short biography of Gustave-Gaspard de Coriolis and I will conclude with the atmospheric equations of motion on Earth.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Physics in the Medieval World</h3><span class="who">Maeve Dai</span></div>
+          <p class="abstract justify">Natural philosophy, as circulated around the universities in Medieval Europe, takes a very different shape from what we see now as physics. In this talk, I’ll walk through some interesting advancements in physics in the medieval age, especially the ones associated with the history of Merton College. I’ll also discuss how scientific methods are different under the Aristotelian world view, and hence how the Enlightenment reshaped the scientific world.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Gödel’s incompleteness theorems</h3><span class="who">Ross McDonald</span></div>
+          <p class="abstract justify">In 1931, Kurt Gödel published a paper which dashed Hilbert’s hopes to axiomatize all of mathematics and to show its consistency. It emphatically showed that there exist “undecidable statements” within any sufficiently powerful axiomatic system, and further that a formal system cannot be used to prove its own consistency. In this talk I will introduce the major ideas behind Gödel’s proof and briefly discuss an interesting conjecture: that the self-referential structures it introduces could underlie consciousness.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Astounding Nature of Cellular Automata</h3><span class="who">Oskar Maatta</span></div>
+          <p class="abstract justify">Cellular automata are generally quite simple models, consisting of a grid of cells, each in one of a finite number of states (e.g. on or off), which evolve in discrete time intervals based on a fixed rule. In this talk I will explore some examples – notably the most famous cellular automaton, Conway’s ‘Game Of Life’, to demonstrate the amazingly complex structures and consequences that can arise from such basic rules. I will then present some real world applications and links to the natural sciences.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum computers: What’s all the fuss about?</h3><span class="who">Rayhan Mahmud</span></div>
+          <p class="abstract justify">Quantum Computing is a fascinating new field at the intersection of computer science, mathematics and physics. It promises to solve problems which are intractable on classical computers. This field studies how to harness some of the strange aspects of quantum physics for use in computer science, allowing quantum algorithms to decrease the computational steps for some problems by many orders of magnitude. In this talk, I will begin by giving a brief overview of classical computers, addressing some limitations. Next I shall give an introduction to fundamental phenomena in quantum mechanics such as superposition, interference and entanglement which underlie quantum computation. After this I shall look at what qubits are and how different quantum logic gates act on them. I then take a look at examples of some quantum algorithms and the application of quantum computers. The talk then concludes with some comments on limitations and difficulties in building a quantum computer including decoherence.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2018</span><span><span class="count">9 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>The Science of Storage</h3><span class="who">Lucy Biddle</span></div>
+          <p class="abstract justify">Computers today bear very little resemblance to those from 50 years ago, and much of this change is due to the development of increasingly space-efficient forms of data storage and processing. In this talk I will present the evolution of computer hardware, explain the limitations faced by current technology and outline what the next generation of storage could look like.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Modern Art and Modern Physics: Painting the Paradigm Shift</h3><span class="who">Jules Desai</span></div>
+          <p class="abstract justify">The early twentieth century saw physics turned on its head by the likes of Einstein, Planck and Schrödinger. Along with this came a philosophical crisis as the world attempted to understand the epistemic and metaphysical implications of this “Modern Physics”. At the same time, artists began to change their perspective on the function and purpose of their art. Art was no longer about the about the narrative but instead moved towards the abstract and the unconscious reaction. This talk will investigate how the paradigm shifts in modern physics influenced and shaped the art of its time. I will consider how, in their work, artists attempted to embody concepts such as non-Euclidean geometry, higher dimensionality and relative simultaneity. I hope to convince you that art and physics are more tightly intertwined than you might think (but, after all, the more one thinks about this the more evident it becomes!).</p>
+        </li>
+        <li class="talk">
+          <div><h3>Random Processes in Genetics</h3><span class="who">Jacob Robertson</span></div>
+          <p class="abstract justify">In this talk I will discuss a stochastic model of evolution with the aim of calculating certain interesting quantities associated with genetic drift. The talk will begin with a brief discussion of natural selection and the theoretical need for discrete units of heredity, of exactly the kind Gregor Mendel had already experimentally found. The rest of the talk focusses on the Moran model, a stochastic model of evolution, in the absence of mutation or selective effects. This will enable a calculation of the probability that a certain allele ‘reaches fixation’ i.e. obtains a frequency of 100% in the population as well as an estimate for the time it will take to do so. The talk concludes by showing how in the limit of large populations the Moran model becomes a diffusive process.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Neural Networks and Machine learning</h3><span class="who">Andrew Doyle</span></div>
+          <p class="abstract justify">Artificial intelligence is evolving rapidly. Whether it will be self-driving cars or almost human robots, nobody knows exactly how it will impact our lives, but the immense power and potential of it are quickly becoming apparent. In this talk I plan to outline the basics of how Neural Networks are structured and go on to explain how machines “learn” by showing a common example of hand written digit recognition. Finally I will look at current projects that may shape our future.</p>
+        </li>
+        <li class="talk">
+          <div><h3>What does it mean to own a bitcoin?</h3><span class="who">Roshan Dodhia</span></div>
+          <p class="abstract justify">Bitcoin is a cryptocurrency and worldwide payment system. Since it’s creation in 2009, there has been a growing interest in this mysterious idea of ‘mining’ for bitcoins. We are all very familiar with a concept of digital currency in the form of credit and debit cards, but few people really understand what it means to own a bitcoin. In my talk, I will explain how cryptocurrencies like Bitcoin work, why they are different from normal currencies we are so comfortable with and finally I’d like to tackle the million dollar (or 114.17 bitcoin) question: should you be investing in cryptocurrencies?</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Science Behind Hubble</h3><span class="who">Georgia Acton</span></div>
+          <p class="abstract justify">Since its launch in 1990 The Hubble Space Telescope has contributed to many ground-breaking discoveries; from observations that helped to calculate the rate of expansion of the universe, to mapping the 3-D distribution of dark matter, Hubble has aided the world of science in many ways. In this presentation I want to explore the science that made Hubble possible and the technology that has led to its extraordinary observations. I will discuss the camera technology on-board, the science and need for a thermoelectric cooler, the presence of a spectrograph, and the use of gyroscopes and flywheels to orientate and focus itself. Hubble has not only help uncover amazing science, it is itself a beautiful piece of technology and I hope to convey this throughout.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Arrow’s Impossibility Theorem: The trouble with ranked voting</h3><span class="who">Jack McIntyre</span></div>
+          <p class="abstract justify">Imagine that you are tasked with designing a voting system. Each voter gets to rank a group of candidates from best to worst and you must somehow turn these individual rankings into a single ranking for the whole electorate. This should be done in such a way that gives the same output ranking each time that your system is presented with the same set of voter preferences. A potential first step would be to decide on some criteria that your system should fulfil to be considered fair. One thing that you may suggest is that if all the voters prefer candidate A to candidate B then the ranking for the group should also prefer A to B. It would also seem sensible to require that whether candidate A beats candidate B or candidate B beats candidate A should be independent of how the voters rank candidate C. It turns out that the only way to satisfy both of these, seemingly reasonable, criteria is to have what is known as a dictatorship, where the result of the election is completely determined by how one particular voter fills in their ballot. This rather surprising result is know as Arrow’s impossibility theorem. In this presentation I will prove the theorem and discuss where it leaves ranked voting.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Physics and Physiology of Vowel Production and Perception</h3><span class="who">Leonie Woodland</span></div>
+          <p class="abstract justify">Communication by speaking is usually done effortlessly, with no thought put into how to produce words or how to decode the sounds we hear into speech. However, speech produces complex sound waves and figuring out which speech sounds these correspond to from the waveforms is not a simple task. In this talk, I will first examine how sound is produced by the larynx. The source-filter theory of speech sound production will then be discussed, along with the anatomy of the vocal tract. The differences between vowels and consonants will be examined. Vowels correspond to specific formants, or amplified harmonics in a spectrogram of the speech, and are thus relatively easy to identify, so the correlations between the articulation of different vowels and the corresponding spectrograms will be examined.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Unreasonable Effectiveness of Mathematics in the Natural Sciences</h3><span class="who">Catherine Felce</span></div>
+          <p class="abstract justify">When ‘Nice but Dodgy’ derivations seem to dominate the first and second year physics syllabus, we are naturally left wondering whether there’s more luck than inevitability in the successful discoveries of our subject. Eugene Wigner reflects on a more fundamental disparity between what physicists can know, and what we might expect to be able to. I will follow his argument and consider various responses and philosophical interpretations.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2017</span><span><span class="count">7 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Do we ever &quot;act on instinct&quot;?</h3><span class="who">Kirill Sasin</span></div>
+          <p class="abstract justify">We seem to be familiar with the concept of instinct and how it affects our everyday lives. We sometimes even say that we act on instinct, trying to justify our behaviour in response to a particular stimulus by blaming our inability to fully control our own actions on this still somewhat arcane biological concept. However, in doing so we are wrong almost one hundred percent of the time. In my talk I will attempt to clarify what instincts are, trace evolution of insticts by exploring how they manifest themselves in other species, show how little of them we still have, and what we have gained instead.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Shockley-James paradox</h3><span class="who">Uros Ristivojevic</span></div>
+          <p class="abstract justify">When Einstein proposed the special theory of relativity, proper understanding of the new theory led to the solution of many paradoxes caused by the inconsistency between Newton&#x27;s mechanics and Maxwell&#x27;s electromagnetism. One of these paradoxes is the Shockley-James paradox which resolution requires careful relativistic analysis of the conservation of the linear momentum. A fairly simple system of charges exhibits an unexpected behaviour. Namely, if a point charge is placed near the magnetic dipole of changing magnetisation, an electric force acting on charge will be induced, but there is no reaction force on the magnet. In this presentation, I will analyse this paradox and show its solution.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Fusion Power</h3><span class="who">Max Plummer</span></div>
+          <p class="abstract justify">Since first theorised in the 1930’s, nuclear fusion as a means of energy production has remained a highly attractive - though elusive - prospect. In this presentation, I will discuss the motivations for this technology and the important role it may play in the future of energy. I will then examine the conditions necessary for nuclear fusion (and, more importantly, ignition) to occur and explore some of the ways that this incredible feat might be accomplished, focussing in particular on magnetic confinement reactors. Finally, I will talk briefly about some of the recent developments in the field as well as what is planned for the future of fusion power.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Summing Divergent Series: The Magic and Dangers of Infinite Sums</h3><span class="who">Matthew Davis</span></div>
+          <p class="abstract justify">The sum of the natural numbers from one to infinity is equal to minus a twelfth. Well not exactly. It&#x27;s very true that the sequence of natural numbers from one to infinity is a divergent series with no sum, but what if we could extend our idea of a sum to encompass all series not just convergent ones? Like the analytic continuation of a complex holomorphic function so too can we extend the domain of sums. There exists a perfectly rigorous mathematics of &quot;generalised sums&quot;, extensions of the idea of summation to divergent sums. In this talk I will introduce some examples of generalised summation techniques, such as Cesàro and Abel Summation. We&#x27;ll also take a look at Ramanujan&#x27;s mysterious &quot;constant of the sum&quot; which, incidentally, is equal to minus one twelfth for the infinite series of natural numbers. If time permits, I&#x27;ll also show how these generalised summation techniques are not just useless abstractions of armchair mathematicians, but actually useful for Physics. Specifically in producing correct results for theoretical predictions of the Casimir Effect. Be prepared for an enlightening glimpse at the magnificent beast we call infinity.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Have I freely chosen to do this presentation?</h3><span class="who">Pablo Espinoza</span></div>
+          <p class="abstract justify">If free will is incompatible with determinism, then the position and momentum of any object, and the action of every being at any infinitesimal point in time is predetermined by the laws of nature and the initial conditions of the universe and I have not freely chosen to do this presentation. If we conclude that we don’t have free will and all of our actions are predetermined, then no moral responsibility can be assigned to our actions. I will argue that the alternate possibilities theory must be slightly modified such that moral responsibility can still be assigned despite an individual having had no alternate possibilities. Instead, for an individual to not be morally responsible for an action, not only must they not have had an alternate possibility, but had there been an alternate possibility available, they would have in fact chosen that action, over the action that they were predetermined to make. That is, were there an alternative universe with different laws of nature and different initial conditions, in which someone like me were faced with a similar situation as me, then they would choose that alternate action available.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Physics beyond physics: economic Bose-Einstein condensation and other interesting concepts</h3><span class="who">Joey Li</span></div>
+          <p class="abstract justify">I will start by giving an overview of econophysics, and its relation to traditional physics and economics. I will then demonstrate an example by showing how statistical mechanical methods can be applied to the economy. I show a model in which energy levels represent levels of revenue, and firms are represented by particles. The case of perfect competition corresponds to indistinguishable particles (the case of monopolistic competition corresponding to distinguishable particles), so the firms follow a Bose-Einstein distribution. A macroscopic number of firms may condense into the lowest energy level (i.e. go bankrupt), leading to an economic crisis. If time allows I will also talk about the application of Bose-Einstein condensation to other complex systems such as biological systems. Lastly, I will return to a bigger-picture perspective and make a few final general comments. Does applying physics to economics make sense, particularly as one of the criticisms of mainstream economics is that it is already too mathematical? If econophysical theories turn out to be true, would it be just a mathematical curiosity, or could it reveal something deep about the nature of our universe?</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Rise of Sport Analytics</h3><span class="who">Oliver Paulin</span></div>
+          <p class="abstract justify">Sport analytics allows sporting competitors to utilise both real time and historic data to provide information which can be used to gain a competitive advantage. As sport science continues to lead people to look for ever finer margins of improvement, sport analytics is becoming increasingly commonplace in a wide range of sports. Continued technological advances allow more data about a team or individual’s performances to be gathered than ever before, and allow the development of the computing capacity required to process this data. In this talk I will give a brief outline of what sport analytics is, and will introduce how it is being used in certain sports to improve performance in several different ways. I will also aim to outline the profound effect the rise of sport analytics has had on the approach towards how to make improvements in sporting performance, in an increasingly professional sporting world, and also examine the limitations of this approach, as well as what the future may hold.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2016</span><span><span class="count">7 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>The Wisdom and Madness of Crowds: A Warning for the Future</h3><span class="who">Toby Adkins</span></div>
+          <p class="abstract justify">The &#x27;crowd&#x27; is often a word used to refer disparagingly to the homogeneous masses of society, with no thought given to the positive connotations of the word. Spring boarding o the ideas outlined by James Suroweicki in his book &quot;The Wisdom of Crowds&quot;, this talk will discuss how the collective intelligence and collaborative power of the crowd in our in- creasingly inter-connected society can become undermined by more subtle and, potentially, sinister aspects of crowd behaviour. These, I believe, serve as a warning for the future that cannot be ignored.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Echidna Code - An Exploration of Alan Turing’s Theory of Morphogenesis</h3><span class="who">David Hosking</span></div>
+          <p class="abstract justify">Alan Turing’s accomplishments in the field of computer science are legendary, but less well known is his contribution to the field of mathematical biology. In his 1952 paper ‘The Chemical Theory of Morphogenesis’, Turing proposed a mechanism by which the genes contained in a zygote might determine the anatomical structure of the organism it develops into. Turing realised that this phenomenon, called morphogenesis, can be accounted for by a simple model in which the chemical substances that trigger growth are allowed to both react chemically with each other and diffuse through tissue. In this talk, I will describe how Turing formalised this idea mathematically, and applied it to a simple model of an organism in the early stages of its development. I will then explore the predictions of such a model of morphogenesis, and discuss the evidence for the approach from observations of real organisms. If time permits, I will use computer simulations to apply Turing’s model to more complex cell structures, and examine the effect of non-linearity in the model.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Fluid simulations for use in computer graphics</h3><span class="who">Ilya Lapan</span></div>
+          <p class="abstract justify">Fluid simulation is possible one of the most widely used tools of computer graphics with a great range of applications, including, but not limited to, films, advertisements, video games. Fluid simulation is not the only application of physics to computer graphics, rigid and soft body dynamics and optics are commonly used but what makes fluid simulation special from other areas is that it requires the most insight in to underlying physics and not just knowledge of computer algorithms. Fluid behavior is too complex to be animated ”by hand” (which is commonly done with rigid and even soft body dynamics) and in my opinion produces the most stunning results in the end. The main governing equations for fluids are Navier–Stokes equations, which are on their own quite interesting, as there is still no proof of existence of smooth analytical solution of them. So the goal is to produce numerical solution to those equations (while allowing some very crude approximations) which can then be presented in a visually pleasing and plausible form for the viewer in the most efficient and fast way to create tools for animators and artists too use. I will discuss some of underlying physics of the problem, methods and techniques for the problem and present implementations of some of the algorithms. I will also discuss technique that can be used to achieve better performance when executing such algorithms and touch on the topic of parallel computing in the context of the problem.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Fractal Dimension of Music</h3><span class="who">Ewan McCulloch</span></div>
+          <p class="abstract justify">Fractals geometry is a dramatic departure from the Euclidean system, possessing properties unheard of in all other geometries. Fractals have the bizarre properties of fractional dimensionality, Self similarity with different scaling and are continuous yet nowhere differentiable. Despite there puzzling nature they are abundant in nature and to some degree even music is fractal. In this presentation I will be investigating how the property of fractional dimensionality may be exploited to analyse and characterise different music styles.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum Biology: a bird’s eye view</h3><span class="who">Caleb Rich</span></div>
+          <p class="abstract justify">On the face of it, the surprising predictions of quantum theory seem at odds with living organisms in the natural world. However discoveries in recent years have suggested that precisely these quantum effects may play an important part in many biological processes, from the ability of birds to navigate using the Earth’s magnetic field to the basis of our sense of smell, and even perhaps the all-important process of photosynthesis. In my talk I will introduce this exciting field before looking in-depth into the theory of the role of quantum theory in the navigational sense of the European robin and the evidence that supports this intriguing proposal.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Current Events - Gravitational Waves</h3><span class="who">Robert Stemmons</span></div>
+          <p class="abstract justify">Recently, the press has been flooded with the recent discovery of gravitational waves. This announcement has rippled through social media - But why is this discovery making waves? In this talk I will describe the theory that predicted the waves, how they were detected, and the event that caused them, before explaining what this discovery means for the future of science.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The little ion engine that could</h3><span class="who">Jacob White</span></div>
+          <p class="abstract justify">When we imagine interplanetary travel, we tend to think of huge machines trailing great plumes of fire. But in reality, chemical rockets are limited in the journeys they can achieve by the mass of fuel they require. This talk will discuss electrical propulsion as an alternative, outlining the theory of how it works, and the various forms of propulsion that are or could be in use. We will touch on the key concepts of space travel, such as Specific Impulse and delta-V, and compare the chemical engine to the electric one. We will end with a brief discussion of Project Orion, the USA’s novel idea for building a rocket by (you guessed it) strapping an enormous nuclear bomb to the bottom.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2015</span><span><span class="count">7 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Nonlinear chemical dynamics: oscillations and chaos</h3><span class="who">Isabelle Naylor</span></div>
+          <p class="abstract justify">Chemical reactions are often thought of as the transformation of matter, where some substances are used up, while others are created. The concentration of reactants decreases, while the concentration of products increases, until the system reaches a fixed equilibrium. However, not all chemical systems behave in such a simple manner. This presentation will explore the more complex behaviours that can be exhibited. I will start by talking about oscillatory reactions, and then look at how, under special conditions, chaotic behaviour can be observed. Finally, I will show that in excitable media, oscillatory behaviour can lead to the formation of travelling waves.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Chaos is come again: A non-linear tour from Othello to Edward Lorenz to Mariah Carey</h3><span class="who">Chris Hamilton</span></div>
+          <p class="abstract justify">In this talk, I will give a brief history of the concept of chaos, formally introduce chaotic dynamical systems, and discuss their prevalence in nature. Using the example of the nonlinear Lorenz equations I will show how we can not only categorise and understand chaotic systems, but how we can use their inherent unpredictability to our advantage. Finally, I will treat my audience to what is undoubtedly the pinnacle of modern scientific achievement - the use of a chaotic circuit to secretly transmit a Mariah Carey song.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Static and Silence - The Cosmic Microwave Background</h3><span class="who">Thomas Hornigold</span></div>
+          <p class="abstract justify">A few percent of the fuzz familiar to analogue TV users is in fact the remnant of the conditions in the early Universe from long before the formation of stars. Within this ‘background noise’ lies the blueprint for the distribution of matter on the grandest scale; galaxies and superclusters. The cosmic microwave background radiation, discovered accidentally in 1965, has provided information from which cosmologists can attempt to construct a timeline of the early Universe; it provides strong evidence for the Big Bang theory, and its inherent anisotropies are responsible for slight inhomogeneities in the Universe; as such inhomogeneous aberrations, we should all be fascinated by it! In this talk I will describe the discovery and outline the significance of this remarkable phenomenon, and the inferences that we have been able to make from studying it; if time permits, I will discuss its relation to the Lambda Cold Dark Matter model of cosmology and possible future measurements attempting to confirm the existence of gravitational waves.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Majorana Fermion</h3><span class="who">Mantas Abazorius</span></div>
+          <p class="abstract justify">The Majorana particle is a particle that is its own antiparticle, Ettore Majorana hypothesized its existence in 1937 but only recently the experiments detected the behavior associated with this fermion. I will talk about the experiments in Netherlands (2012) and Princeton (2013) where a majorana type particle was found using superconductors at extremely low temperatures. I will also present the difficulties associated with the detection of such particles. This will include its quantum properties and the theory that predicts its existence. The talk will also cover the possible applications of the particle in quantum computing as well as how its properties could explain the behaviour of neutrinos and the origins of dark matter.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Physics and Epistemology: Can we ever really know anything?</h3><span class="who">Adam Stanway</span></div>
+          <p class="abstract justify">Many of the greatest thinkers in the history of Physics; such as Newton, Hooke and to some extent Einstein, could in fact be considered &#x27;Natural Philosophers&#x27; rather than &#x27;physicists&#x27;; concerned not just with the how and why of what we see around us in the observable universe, but also with how and why we *can* examine the world around us. The fact that we seem to be able to describe the natural world using mathematics and empirical (or sensory, experiential) evidence is fascinating and mysterious, and a topic of hot debate amongst epistemological philosophers and scientists alike. I intend to examine the extent to which an apparently logically sound theory known as the &#x27;Problem of Induction&#x27;, undermines claims of scientifically discerned &#x27;knowledge&#x27;, and also the extent to which areas of debate and subjectivity within Physics (such as the measurement problem) can exist, despite the fact that Physics intends to construct absolute and universally applicable theories to describe nature.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Pushing the envelope – the limits of aerodynamics</h3><span class="who">David Felce</span></div>
+          <p class="abstract justify">In this talk I will begin with a brief account of the aerodynamic force of lift, and the characteristics of a typical aerofoil. I will proceed to consider how the airflow over an aerofoil can be disrupted, and the effects this can have on the lifting characteristics. Lastly I will consider regimes of extreme velocity and density and the difficulties and dangers they pose to aircraft operating within them. If there is time I may touch on design steps which can be taken to minimize these difficulties.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Casimir effect</h3><span class="who">Glenn Wagner</span></div>
+          <p class="abstract justify">The Casimir effect is a quantum mechanical effect which demonstrates that the vacuum in quantum field theory is far from empty. I will start with a short outline of the history of the Casimir effect, before deriving the formula for the force between two parallel conducting plates in vacuum. Then I would like to briefly discuss the mathematical process of renormalization, which arises in this context when dealing with infinities. Next, I will describe the experiments which were conducted to measure the Casimir force, and focus on the 1997 measurement by S. Lamoreaux. We will also look at a different, but related effect: the dynamical Casimir effect, which was experimentally verified in 2001. In this case the plates are accelerating and this causes photons to be emitted from the vacuum. I will end with possible applications of the Casimir effect in physics research and in technology and then give an outlook.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2014</span><span><span class="count">8 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Self-Organized Criticality</h3><span class="who">James Matthew</span></div>
+          <p class="abstract justify">It has been observed that many complex dynamical systems exhibit certain common features, including scale invariant spatio-temporal behaviour and 1/f noise in the power spectrum. I will introduce the theory of self-organized criticality (SOC), which aims to explain these behaviours. I intend to give a qualitative explanation of how SOC could arise for a system which is slowly driven and has dominant internal interactions. I will then explain the sandpile model introduced in the 1987 paper by Wiesenfeld et al. and discuss the extent to which it is in agreement with experiment. Finally, I shall conclude by examining whether or not SOC can account for the behaviour of a variety of other real dynamical systems.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum Mechanics and Photosynthesis: The Tree of Superimposed Knowledge?</h3><span class="who">Tiffany Brydges</span></div>
+          <p class="abstract justify">This talk will explore the importance of quantum mechanics in photosynthesis. It was long thought that classical physics accurately described the process of energy transfer in photosynthesis, however this view is now being challenged and it is thought quantum mechanics plays a crucial role. I will explore new theories concerning the relevance of quantum mechanics in photosynthesis and the experimental evidence supporting them, and hope to cover possible implications for new technology.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Mother Earth Will Kill Us All</h3><span class="who">Elizabeth Traynor</span></div>
+          <p class="abstract justify">In this talk I shall examine some of the various ways in which large scale destruction of life might occur due to natural processes. The areas covered will include climate change, volcanic activity, and variations in the Earth’s magnetic field. I hope to cover the relative risks posed by each of these things, including the scientific background, the plausibility of such an event occurring, and the scale of catastrophe that each would cause. I will also consider the timescale on which these things would happen, in order to evaluate the risk of death and destruction to us as individuals, to Merton College, and to mankind as a whole. Due to the widely disputed nature of some of these topics, I shall also consider varying viewpoints on each area, and examine the scientific evidence behind these viewpoints.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Liquid Crystals</h3><span class="who">Alexander Moore</span></div>
+          <p class="abstract justify">Liquid crystals are to familiar to many due to their use in electronic displays. However, they have other practical uses, and are also commonly found in nature. I will look at the fundamental properties of liquid crystals, and how their inherent anisotropy gives rise to interesting optical, mechanical and electromagnetic properties. I will then aim show how these properties are used in practical applications, not only in displays but also thermometers and tuneable filters. I will end with examples of how their physical properties can give rise to complex and beautiful patterns.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Black Holes, Information Paradox and the Firewall Debate</h3><span class="who">Jasper Russell</span></div>
+          <p class="abstract justify">This talk will cover our evolving understanding of the nature of Black Holes. Starting from their initial prediction, have represented one the few areas where General Relativity and Quantum Mechanics overlap. This is exemplified by the Information Loss Paradox that was shown through Hawking radiation. My aim will be to discuss the debate surrounding the most recent attempt to resolve this paradox: the Firewall. I will briefly explain the semiclassical interpretation of Black Holes and the previously accepted solution of the paradox through complementarity. Then, I will discuss the need for a deviation from complementarity, the principles of the Firewall, and the responses to this resolution of the paradox. If possible, I will attempt to speak on the most up to date information regarding this ongoing debate.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Strike of Enlightenment: exploring the mysterious phenomenon of lightning</h3><span class="who">Ravin Jain</span></div>
+          <p class="abstract justify">Mankind has often be awed by the ferocious power of bolts of electricity from the heavens but our understanding of lightning has come a long way since Benjamin Franklin experimented with kites in thunderstorms. I will attempt to explain how and why lightning originates in our atmosphere and why it is not just found in thunderstorms, or even localised just to Earth. I will then go on to distinguish between types of natural lightning before examining what actually happens in the atmosphere during an electrical discharge and how this has been recreated in the laboratory, leading to artificial lightning. I shall comment on theories concerning the harnessing of power from natural lightning before concluding with a brief foray into the elusive nature of ball lightning, centred on recent experiments carried out to probe its behaviour. I might even answer the million dollar question: does lightning strike twice?</p>
+        </li>
+        <li class="talk">
+          <div><h3>A Guide to Chalksmanship</h3><span class="who">Samuel Artigolle</span></div>
+          <p class="abstract justify">In the Department of Physics at Oxford, the vast majority of teaching is done with the help of chalk and blackboards. Each lecturer has their own preference as to the role that the blackboard plays; some use it in tandem with projected PowerPoint slides, perhaps showing the steps of a derivation, whilst others forgo any digital aids whatsoever and exclude themselves to using only the blackboard. The skill with which lecturers wield and use chalk varies; some are prone to having small pieces breaking off whenever they write, whilst others seem to be able to reproduce the same handwriting regardless of the size or shape of the particular piece in their hand. I aim to investigate some of the factors that affect how chalk behaves as it is being used, and suggest an optimal method with which blackboard-writing should be approached. If time permits, I may also investigate a method that allows a user to draw dashed lines quickly (popularised as the &#x27;Walter Lewin&#x27; method), and see how such a process may be explained.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum dots</h3><span class="who">Sergejs Lukanihins</span></div>
+          <p class="abstract justify">Quantum dots are semiconductor nanocrystals that display unique optical and electrical properties due to the quantum confinement effect. The aim of this talk is to briefly introduce the concept of quantum dots and their applications in various fields. I will start by outlining a fairly simple model that explains the physical properties of quantum dots, namely the band-gap dependence on the size of the dot and the quantization of electron energy levels. I will then briefly cover the various ways of manufacturing quantum dots. Finally, I will look in some detail at the applications of quantum dots in science and technology, which include particle and cell tracking in biology, single electron transistors, solar cells, quantum dot LEDs and quantum dot displays. I may also cover the possibility of using quantum dots as qubits for quantum computing.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2013</span><span><span class="count">8 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Beyond the Cradle</h3><span class="who">Dan Tsang</span></div>
+          <p class="abstract justify">As the human population continues to grow, becoming ever hungrier for resources, it increasingly seems that the most economically feasible long-term solution is for humanity to try its fortunes in interplanetary space. In this talk I aim to discuss how the first steps of this process might be taken, beginning with the development of more efficient means of reaching orbit and the physics behind them. I will examine the ways that passing asteroids could serve as new sources of raw materials, and the orbital mechanics involved in regularly making journeys back and forth to an object with an eccentric orbit. Finally, if I have time, I will look at the survival challenges faced by humans in space, in particular the threats posed by cosmic radiation and micrometeoroids.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum Teleportation</h3><span class="who">Michael Adamer</span></div>
+          <p class="abstract justify">The talk will start with mentioning classical bits and introducing their quantum equivalent, the qubit. Some properties of them are discussed and quantum indistinguishability is revised. After this introduction the theory of quantum teleportation is discussed. This includes superdense coding to introduce important concepts such as the four Bell states and the four unitary transformations used to recover certain quantum states. After that I will talk about the actual quantum teleportation protocol as proposed by Bennett et al. and mention theorems such as ‘no-cloning’. After the theory, the talk will move to the experimental realisation thereof starting with describing a source of entangled photons using parametric down conversion and very quickly touch on the issue of performing a BSM. This discussion will be incorporated into the last part of the presentation, if time does not allow an extra treatment of it. In the final part of the talk I will quickly describe the experimental setup and outcome of the experiment performed in Innsbruck by Zeilinger et al.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Physical Possibilities of Travel through Time</h3><span class="who">Joel Devine</span></div>
+          <p class="abstract justify">The aim is to give an overview of Einstein’s ideas of a curved spacetime and how his theory of relativity can lead to many physical possibilities of time travel, to the future and to the past. Explaining how multiple theories satisfying Einstein’s equations can accomplish time travel including Special and General Relativity, as well as Superstring theory and the concept of wormholes.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Physics and Butterflies</h3><span class="who">Catherine Hale</span></div>
+          <p class="abstract justify">From striking colourful wings produced by optical effects of the interference of light, to their uses in new technologies, butterflies and physics when looked at together have the ability to both amaze the observer and improve technologies. This presentation aims to look at these interesting properties and contemplate the movements of butterflies in air and analyse the physics of this. It will then go on to look at how current research is turning to nature, and to butterflies, in order to advance materials by taking inspiration from where nature has triumphed first. This presentation aims to convince the audience of how physics can be seen beautifully in nature through the butterfly and ponder what advances we can develop from a butterfly and what these could mean for future technology.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Superconductors, Superfluids and their uses in today&#x27;s world</h3><span class="who">Toby Smith</span></div>
+          <p class="abstract justify">Superconductors were strange and unintuitive when they were first discovered. They bemused scientists and inspired a new generation of physicists. In this talk I aim to unravel the mysteries of the superconductors and explore how they were discovered in the first place. I will then demonstrate, through the means of YouTube, some of their most interesting properties and try and give the audience a taste the physics behind them. I will continue by taking a slight detour and dive into the world of superfluidity. To conclude I will show the audience how they can be utilised in today&#x27;s world and how these weird and wonderful properties lend themselves to certain applications.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum Encryption</h3><span class="who">Samuel Gillespie</span></div>
+          <p class="abstract justify">In my presentation I plan to briefly touch on the problems with classical encryption (and how their security is dependent on the eavesdroppers computing power). I then plan to talk about how quantum physics can be used to send encryption keys securely through both entanglement and polarized photons and how their security does not depend on an eavesdroppers computing power. However, I may decide to shift my talk to be more about one method of security than the other depending on time constraints and the amount of detail I wish to express.</p>
+        </li>
+        <li class="talk">
+          <div><h3>The Flight of a Frisbee</h3><span class="who">Greg Farquhar</span></div>
+          <p class="abstract justify">I will discuss the physics behind a Frisbee&#x27;s flight, focussing on how it generates and utilises aerodynamic lift and gyroscopic stability to achieve a smooth flight. If possible, I want to develop a decent model of the Frisbee flight and conduct numerical simulations.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Metamaterial cloaking</h3><span class="who">Christopher Staines</span></div>
+          <p class="abstract justify">In recent years astonishing scientific progress has been made in developing the &#x27;invisibility cloak&#x27; of legend. One particularly ingenious way of achieving this has been by channelling the awesome power of &#x27;metamaterials&#x27;: complex artificial materials that have been engineered at the subwavelength level to give rise to incredible electric and magnetic phenomena not found in nature. The principle of their operation is the new and fascinating field of &#x27;transformation optics&#x27;, which details how the trajectory of light through a medium can be twisted and warped as desired using appropriate coordinate transformations of space according to a ray of light. However, as expected from a field at such an early stage, there are still many barriers to reaching the ultimate goal: cloaking a human-sized object in a practical way. I hope I can show you how and why this works, and perhaps shed some light on recent developments...or not.</p>
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary><span class="year">2012</span><span><span class="count">9 talks</span><span class="sign" aria-hidden="true"></span></span></summary>
+      <ol>
+        <li class="talk">
+          <div><h3>Where Physics and the UN meet: how can climate science inform public policy?</h3><span class="who">Luke Hughes</span></div>
+          <p class="abstract justify">In this talk I will explore the interface between climate science and public policy. I will examine how climate scientists use computer modelling to predict future climate scenarios, and how these findings can be used to inform policymakers. By examining the literature around this area, I will talk about the different approaches to the problem and examine the misconceptions about the important features of an emissions reduction profile that will avoid dangerous climate change. I will conclude that there is a dangerous mismatch between the science and the policy, which must be urgently addressed.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Neutrinos: A Biography</h3><span class="who">Laurie McClymont</span></div>
+          <p class="abstract justify">Firstly, I will explain why neutrinos were first postulated by Pauli as mystery particles that were necessary to maintain conservation laws. I will then go on to describe the properties of the neutrino why these properties make it hard to detect and how this is overcome. From this I will go on to talk about the results from OPERA. Firstly I will describe how the measurements were taken and what the results said. I will discuss about why most scientists believe these results to be false, referring to the experiment involving Supernova 1987A. Then I would like to speculate at what if the results were genuine. I want to say why this would be exciting for young theoretical physicists and also discuss some of the possible theories that have been talked about.</p>
+        </li>
+        <li class="talk">
+          <div><h3>A (very) brief introduction to quantum computing</h3><span class="who">Matthew Constable</span></div>
+          <p class="abstract justify">I will begin by discussing the history of quantum computing and outline the consequences to society which would result if or when it ever becomes feasible, such as the security of internet communications. I will then go on to outline the basic principles of quantum computing and why a quantum computer would be so computationally potent whilst also relating these principles to those of classical computers. Following this, I will discuss briefly some of the practical difficulties in constructing and operating a quantum computer.</p>
+        </li>
+        <li class="talk">
+          <div><h3>False Assumption about Organic Light Emitting Diode Operation, Manufacture and Materials</h3><span class="who">Thomas Snell</span></div>
+          <p class="abstract justify">I will briefly describe the operation of two types of organic electroluminescent device, OLED and Light Emitting Electrochemical Cell. I will discuss how they are made briefly and why they are made using these methods. Then I will talk about the fact that these two routes of manufacture are used, on the assumption that the materials have low thermal degradation, (at least for polymer based devices.) This statement cannot be made with any confidence this parameter has been measured for &lt;10% of OLED materials. These OLED materials will in fact survive melt processes, briefly discussing how I showed this. Then I will discuss advantages and disadvantages of the melt process, and how it can be improved by using a Light Emitting Electrochemical cell system.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Destroying planet Earth the in most energy efficient manner</h3><span class="who">Richard Fern</span></div>
+          <p class="abstract justify">In this talk I will begin by outlining a definition for the destruction of planet earth as this is a necessary prerequisite to properly considering methods to attain that aim. We also have to consider a time-frame for project completion as the entity interested in this venture will be a living being so this should be done within a lifetime. I will then consider the physics of some of the most interesting, most efficient, and most achievable methods under current technology. I will also need to consider methods that are currently unrealistic but could be achieved sometime in the future. I will then come to a conclusion from the research and calculations I have done to advise on the method which I believe to have the lowest energy cost whilst still retaining a good chance of geocide in a reasonable time frame.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Dark Matter &amp; Dark Energy: how far do we know the Universe?</h3><span class="who">Alessandro Geraldini</span></div>
+          <p class="abstract justify">In this presentation I will give a brief account of why the need for such thing as &quot;Dark Matter&quot; to exist arises. I will also discuss what the likely candidates for Dark Matter are, with advantages and disadvantages for each. Then I will briefly address the topic of &quot;Dark Energy&quot;, and how it arises from the recent discovery that the expansion of the Universe could be accelerating.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Balancing the Solar System</h3><span class="who">Jonathan Burr</span></div>
+          <p class="abstract justify">To begin with I&#x27;d like to talk about orbital resonance, expand a bit on the theory of it and give some examples (like the gaps in Saturn&#x27;s rings). I&#x27;d also then like to talk about the differences between stable and unstable resonances and possibly its role in allowing larger bodies to eject bodies in a similar orbit out of the solar system. I&#x27;d then like to talk about the chaotic nature of the solar system and how models of it tend to fail and talk about the time scales on which that happens. Then I&#x27;d like to look at the precession of orbits. I&#x27;d then like to combine these ideas together to study the orbit of Mercury and how it interacts with other bodies in the solar system (particularly Jupiter) and the resulting effect on the shape of Mercury&#x27;s orbit.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Quantum Mechanics vs. The Economy; Schrodinger Fat Cat and its Bonus</h3><span class="who">William Bennett</span></div>
+          <p class="abstract justify">This talk will discuss the relationships between Quantum Mechanics and our Global Economy, going to speculate on the causes on the recent recession and on how, as Physicists, we can avoid further catastrophe. Firstly, I will discuss Game Theory and the how, from a scientific point of view, an analytical mind is far more successful than an emotive one, often leading to rather surprising results. I will then talk about the similarities between Zero Point energy, and liquidity and leverage (or interest rate), coining the term Zero Point Money. Finally, the Big One, I will try to philosophise on a method of calculating risk, and economic probability, using Quantum Amplitudes and interference.</p>
+        </li>
+        <li class="talk">
+          <div><h3>Supernovae: The Basics</h3><span class="who">Ramon Gonsalves</span></div>
+          <p class="abstract justify">I will be talking about supernovae, types I and II, giving a description of what the different types are, and how they might occur, i.e. from accretion from a stellar companion, merging etc. I will also describe how these processes transform one type of stellar body into another, as in the transformation of a white dwarf into a neutron star, and talk about the discovery of supernovae while showing some examples of the ones we have observed.</p>
+        </li>
+      </ol>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>Artur Ekert · Mathematical Institute, University of Oxford · Merton College</span>
+    <nav aria-label="Elsewhere">
+      <a href="https://www.maths.ox.ac.uk">Mathematical Institute</a>
+      <a href="https://www.merton.ox.ac.uk">Merton College</a>
+      <a href="https://qubit.guide">qubit.guide</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

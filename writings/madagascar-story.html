@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Island That Sailed Away — How Madagascar Grew Its Own World</title>
+<style>
+  :root{
+    --cream:#FBF3E4;
+    --paper:#FFFBF2;
+    --ink:#3A2E28;
+    --ink-soft:#6B5A4E;
+    --ocean:#2E7DA1;
+    --ocean-deep:#1C5D7A;
+    --terra:#D9743B;
+    --sun:#E8B04B;
+    --leaf:#4E7A51;
+    --leaf-soft:#7BA36F;
+    --line:#E4D6BE;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px;margin:0 auto;padding:0 22px 90px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    text-align:center;
+    padding:54px 18px 30px;
+    margin:0 -22px 10px;
+    overflow:hidden;
+  }
+  .hero .kicker{
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    color:var(--terra);
+    font-family:"Trebuchet MS",Verdana,sans-serif;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,5.4vw,3.4rem);
+    line-height:1.08;
+    margin:.1em 0 .15em;
+    color:var(--ocean-deep);
+  }
+  .hero .sub{
+    font-size:clamp(1rem,2.4vw,1.25rem);
+    color:var(--ink-soft);
+    font-style:italic;
+    max-width:600px;
+    margin:0 auto;
+  }
+  .hero svg{display:block;width:100%;max-width:880px;height:auto;margin:22px auto 0;}
+
+  /* ---------- LEAD ---------- */
+  .lead{
+    font-size:1.14rem;
+    max-width:680px;
+    margin:26px auto 8px;
+    text-align:center;
+    color:var(--ink-soft);
+  }
+  .divider{
+    width:120px;height:22px;margin:26px auto;display:block;opacity:.85;
+  }
+
+  /* ---------- STORY SCENES ---------- */
+  .scene{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px 30px;
+    margin:26px 0;
+    box-shadow:0 10px 26px -20px rgba(58,46,40,.55);
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .scene.with-art{grid-template-columns:1.15fr .85fr;align-items:center;}
+  .scene.with-art.flip .art{order:-1;}
+  @media(max-width:680px){
+    .scene.with-art{grid-template-columns:1fr;}
+    .scene.with-art.flip .art{order:0;}
+  }
+  .scene .num{
+    font-family:"Trebuchet MS",Verdana,sans-serif;
+    font-weight:700;
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--terra);
+  }
+  .scene h2{
+    font-size:1.5rem;
+    margin:.1em 0 .35em;
+    color:var(--ocean-deep);
+    line-height:1.15;
+  }
+  .scene p{margin:.5em 0;font-size:1.08rem;}
+  .art svg{width:100%;height:auto;display:block;}
+  .aside{
+    margin-top:12px;
+    background:linear-gradient(180deg,#F4EAD2,#EFE2C4);
+    border-left:4px solid var(--sun);
+    border-radius:6px;
+    padding:10px 14px;
+    font-size:.92rem;
+    color:var(--ink-soft);
+    font-family:"Trebuchet MS",Verdana,sans-serif;
+    line-height:1.5;
+  }
+  .aside b{color:var(--terra);font-family:inherit;}
+  .aside .tag{
+    display:inline-block;font-weight:700;color:var(--leaf);
+    text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;margin-right:6px;
+  }
+
+  /* ---------- SECTION TITLES ---------- */
+  .section-head{text-align:center;margin:64px auto 6px;}
+  .section-head .kicker{
+    letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;color:var(--terra);
+    font-family:"Trebuchet MS",Verdana,sans-serif;font-weight:700;
+  }
+  .section-head h2{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--ocean-deep);margin:.15em 0;}
+  .section-head p{color:var(--ink-soft);max-width:640px;margin:.2em auto 0;}
+
+  /* ---------- PARALLEL TIMELINE ---------- */
+  .legend{
+    display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:22px 0 8px;
+    font-family:"Trebuchet MS",Verdana,sans-serif;font-size:.85rem;
+  }
+  .legend span{display:inline-flex;align-items:center;gap:8px;}
+  .swatch{width:16px;height:16px;border-radius:4px;display:inline-block;}
+  .tl{position:relative;margin:26px auto 0;max-width:900px;}
+  .tl::before{
+    content:"";position:absolute;left:50%;top:0;bottom:0;width:6px;margin-left:-3px;
+    background:linear-gradient(180deg,var(--ocean-deep),var(--ocean),var(--leaf),var(--terra),var(--sun));
+    border-radius:6px;
+  }
+  .row{
+    display:grid;grid-template-columns:1fr 90px 1fr;align-items:stretch;
+    margin:20px 0;position:relative;
+  }
+  .node{
+    grid-column:2;justify-self:center;align-self:center;
+    width:66px;height:66px;border-radius:50%;
+    background:var(--paper);border:4px solid var(--sun);
+    display:flex;align-items:center;justify-content:center;z-index:2;
+    box-shadow:0 6px 16px -8px rgba(58,46,40,.5);
+  }
+  .node svg{width:38px;height:38px;}
+  .when{
+    position:absolute;left:50%;transform:translateX(-50%);
+    top:-4px;background:var(--ink);color:var(--cream);
+    font-family:"Trebuchet MS",Verdana,sans-serif;font-size:.7rem;font-weight:700;
+    padding:3px 10px;border-radius:20px;white-space:nowrap;z-index:3;letter-spacing:.03em;
+  }
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:14px 16px;font-size:.98rem;box-shadow:0 8px 20px -18px rgba(58,46,40,.6);
+  }
+  .card h4{
+    margin:0 0 4px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    font-family:"Trebuchet MS",Verdana,sans-serif;
+  }
+  .earth{grid-column:1;margin-right:14px;border-top:4px solid var(--ocean);}
+  .earth h4{color:var(--ocean-deep);}
+  .life{grid-column:3;margin-left:14px;border-top:4px solid var(--leaf);}
+  .life h4{color:var(--leaf);}
+  .row.pad-top{margin-top:34px;}
+  @media(max-width:680px){
+    .tl::before{left:26px;}
+    .row{grid-template-columns:1fr;}
+    .node{grid-column:1;justify-self:start;margin-left:-7px;}
+    .when{left:70px;transform:none;}
+    .earth,.life{grid-column:1;margin:6px 0 0 0;}
+    .row{margin-bottom:30px;}
+  }
+
+  /* ---------- FACT STRIP ---------- */
+  .facts{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:30px 0 0;
+  }
+  .fact{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;
+  }
+  .fact .big{font-size:2rem;font-weight:700;color:var(--terra);line-height:1;font-family:"Trebuchet MS",Verdana,sans-serif;}
+  .fact .lbl{font-size:.9rem;color:var(--ink-soft);margin-top:6px;}
+
+  footer{
+    text-align:center;margin-top:60px;color:var(--ink-soft);font-size:.85rem;
+    font-family:"Trebuchet MS",Verdana,sans-serif;line-height:1.7;
+  }
+  footer .rule{width:80px;height:2px;background:var(--line);margin:0 auto 18px;}
+  a{color:var(--ocean-deep);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="kicker">A True Story of Deep Time · Read Aloud Together</div>
+    <h1>The Island That Sailed Away</h1>
+    <p class="sub">How Madagascar drifted off alone — and grew a whole world of animals found nowhere else on Earth</p>
+    <svg viewBox="0 0 880 260" role="img" aria-label="Sunset over Madagascar with baobab trees, a lemur, and the sea">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#F6C56A"/><stop offset=".55" stop-color="#E8A15A"/><stop offset="1" stop-color="#D9743B"/>
+        </linearGradient>
+        <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2E7DA1"/><stop offset="1" stop-color="#1C5D7A"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="880" height="200" fill="url(#sky)"/>
+      <circle cx="660" cy="96" r="46" fill="#FBE9C4" opacity=".95"/>
+      <rect x="0" y="176" width="880" height="84" fill="url(#seaG)"/>
+      <!-- sea sparkle -->
+      <g stroke="#BFE1EC" stroke-width="3" stroke-linecap="round" opacity=".7">
+        <path d="M60 206 q10 -6 20 0"/><path d="M170 224 q10 -6 20 0"/><path d="M300 210 q10 -6 20 0"/>
+        <path d="M520 226 q10 -6 20 0"/><path d="M700 208 q10 -6 20 0"/><path d="M810 222 q10 -6 20 0"/>
+      </g>
+      <!-- ground -->
+      <path d="M0 176 Q220 150 440 172 T880 176 L880 200 L0 200 Z" fill="#B9713A"/>
+      <!-- baobab left -->
+      <g transform="translate(150,60)">
+        <path d="M-14 118 C-20 70 -18 40 -8 30 C-16 20 -14 6 -2 6 C-8 -6 8 -8 10 4 C22 0 30 12 20 22 C34 30 30 60 24 118 Z" fill="#7A4A2A"/>
+        <g stroke="#5E3A22" stroke-width="4" stroke-linecap="round">
+          <path d="M2 20 L-18 2"/><path d="M6 18 L2 -4"/><path d="M10 20 L28 0"/><path d="M12 24 L34 14"/><path d="M-4 22 L-30 14"/>
+        </g>
+        <circle cx="2" cy="2" r="22" fill="#4E7A51"/><circle cx="-18" cy="8" r="12" fill="#5E8C5E"/><circle cx="24" cy="8" r="12" fill="#5E8C5E"/>
+      </g>
+      <!-- baobab right small -->
+      <g transform="translate(560,110) scale(.6)">
+        <path d="M-14 118 C-20 70 -18 40 -8 30 C-16 20 -14 6 -2 6 C-8 -6 8 -8 10 4 C22 0 30 12 20 22 C34 30 30 60 24 118 Z" fill="#8A5432"/>
+        <circle cx="2" cy="2" r="24" fill="#5E8C5E"/>
+      </g>
+      <!-- lemur on ground -->
+      <g transform="translate(360,150)">
+        <ellipse cx="0" cy="24" rx="14" ry="18" fill="#8A8F98"/>
+        <circle cx="0" cy="2" r="12" fill="#9AA0A9"/>
+        <circle cx="-5" cy="0" r="4.5" fill="#fff"/><circle cx="5" cy="0" r="4.5" fill="#fff"/>
+        <circle cx="-5" cy="1" r="2.4" fill="#2A2A2A"/><circle cx="5" cy="1" r="2.4" fill="#2A2A2A"/>
+        <path d="M-11 -8 l-4 -8 l7 3 Z" fill="#2A2A2A"/><path d="M11 -8 l4 -8 l-7 3 Z" fill="#2A2A2A"/>
+        <circle cx="0" cy="6" r="2" fill="#2A2A2A"/>
+        <!-- ringed tail -->
+        <path d="M12 30 C40 34 46 6 30 -6" fill="none" stroke="#3A3A3A" stroke-width="7" stroke-linecap="round"/>
+        <path d="M12 30 C40 34 46 6 30 -6" fill="none" stroke="#EDEDED" stroke-width="7" stroke-linecap="round" stroke-dasharray="4 6"/>
+      </g>
+      <!-- elephant bird silhouette right -->
+      <g transform="translate(760,120)" fill="#6E4327">
+        <ellipse cx="0" cy="24" rx="20" ry="16"/>
+        <path d="M6 14 C10 -18 22 -22 20 -6 C19 2 16 8 12 14 Z"/>
+        <circle cx="20" cy="-8" r="6"/>
+        <path d="M25 -8 l10 -2 l-9 5 Z"/>
+        <rect x="-6" y="36" width="4" height="16"/><rect x="8" y="36" width="4" height="16"/>
+      </g>
+    </svg>
+  </header>
+
+  <p class="lead">Everything in this story really happened — it just happened very, very slowly, across hundreds of millions of years. Read it aloud together. The little yellow notes are for curious older kids and grown-ups who want the real science words.</p>
+
+  <svg class="divider" viewBox="0 0 120 22"><g stroke="#D9743B" stroke-width="2" fill="none" stroke-linecap="round"><path d="M4 11h40"/><circle cx="60" cy="11" r="6" fill="#E8B04B" stroke="none"/><path d="M76 11h40"/></g></svg>
+
+  <!-- ============ STORY ============ -->
+
+  <section class="scene with-art">
+    <div>
+      <div class="num">Scene 1 · Long, long ago</div>
+      <h2>Everyone squeezed together</h2>
+      <p>Once upon a time, there was no island called Madagascar at all. Its rocks were packed into the middle of an enormous crowd of land, where nearly all the world's continents huddled together in one giant piece.</p>
+      <p>Africa held India's hand. And little Madagascar was squeezed right in between them, like a child in the middle of a family photo.</p>
+      <div class="aside"><span class="tag">Big word</span>Grown-ups call that giant huddle of land <b>Gondwana</b> — a supercontinent that also held South America, Antarctica and Australia.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="Map of Gondwana with Africa, Madagascar and India joined together">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#CDE5EE"/>
+        <!-- South America hint -->
+        <path d="M18 70 Q6 120 34 150 Q54 120 44 70 Z" fill="#B7CBA0"/>
+        <text x="26" y="120" font-size="8" fill="#5A6E47" font-family="Verdana" transform="rotate(-8 26 120)">S. America</text>
+        <!-- Africa -->
+        <path d="M70 60 Q120 44 150 70 Q168 100 150 140 Q140 180 110 196 Q78 180 70 140 Q62 100 70 60 Z" fill="#6FA06B"/>
+        <text x="94" y="120" font-size="11" fill="#2F4A2C" font-family="Verdana" font-weight="bold">Africa</text>
+        <!-- Madagascar wedge -->
+        <path d="M162 96 Q176 110 172 150 Q168 176 158 184 Q150 160 152 128 Q154 106 162 96 Z" fill="#D9743B"/>
+        <text x="176" y="150" font-size="8" fill="#7a3d18" font-family="Verdana" transform="rotate(78 176 150)">Madagascar</text>
+        <!-- India -->
+        <path d="M182 96 Q220 90 236 112 Q226 150 200 156 Q182 130 182 96 Z" fill="#C9A24B"/>
+        <text x="196" y="122" font-size="10" fill="#6a5320" font-family="Verdana" font-weight="bold">India</text>
+        <!-- Antarctica -->
+        <path d="M96 206 Q160 196 210 210 Q160 236 110 226 Z" fill="#E3EBEF"/>
+        <text x="130" y="222" font-size="8" fill="#7d8a90" font-family="Verdana">Antarctica</text>
+        <!-- Australia hint -->
+        <path d="M244 150 Q276 148 282 176 Q262 194 240 182 Z" fill="#B7CBA0"/>
+        <text x="248" y="174" font-size="7.5" fill="#5A6E47" font-family="Verdana">Australia</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art flip">
+    <div>
+      <div class="num">Scene 2 · The great crack</div>
+      <h2>The land begins to split</h2>
+      <p>Then, ever so slowly — so slowly that a whole dinosaur could be born, grow old, and turn to stone before anything looked different — the ground began to crack.</p>
+      <p>Madagascar, still holding India's hand, started pulling away from Africa. Warm seawater came rushing into the gap between them, wider and wider, until there was an ocean where the crack had been.</p>
+      <div class="aside"><span class="tag">Big word</span>That first sea between Madagascar and Africa is the <b>Mozambique Channel</b>. The splitting began around <b>180 million years ago</b>.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="Madagascar and India pulling away from Africa with sea flooding the gap">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#8FC4D6"/>
+        <path d="M40 60 Q90 44 120 70 Q138 100 120 140 Q110 180 80 196 Q48 180 40 140 Q32 100 40 60 Z" fill="#6FA06B"/>
+        <text x="60" y="122" font-size="11" fill="#2F4A2C" font-family="Verdana" font-weight="bold">Africa</text>
+        <!-- crack water -->
+        <path d="M132 60 Q150 130 120 200 L150 200 Q176 130 158 60 Z" fill="#2E7DA1" opacity=".55"/>
+        <!-- Madagascar + India drifting right -->
+        <g transform="translate(30,0)">
+          <path d="M182 96 Q196 110 192 150 Q188 176 178 184 Q170 160 172 128 Q174 106 182 96 Z" fill="#D9743B"/>
+          <path d="M202 96 Q240 90 256 112 Q246 150 220 156 Q202 130 202 96 Z" fill="#C9A24B"/>
+        </g>
+        <!-- arrows -->
+        <g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round">
+          <path d="M150 118 h34"/><path d="M178 108 l10 10 l-10 10"/>
+          <path d="M150 158 h34"/><path d="M178 148 l10 10 l-10 10"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art">
+    <div>
+      <div class="num">Scene 3 · A friend lets go</div>
+      <h2>Madagascar is left all alone</h2>
+      <p>For a long while Madagascar and India drifted together, like two friends sharing one small boat. But then the boat split in two!</p>
+      <p>India let go and hurried off toward the north — in such a rush that one day it would crash into Asia and crumple up the tallest mountains in the world. And Madagascar was left all by itself, a single island in the middle of a wide, wide ocean.</p>
+      <div class="aside"><span class="tag">Big word</span>India broke away about <b>88 million years ago</b>. Madagascar has been an island on its own ever since — that's the secret to everything that comes next.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="India speeding north while Madagascar sits alone in the ocean">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#2E7DA1"/>
+        <g stroke="#5AA0BE" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7">
+          <path d="M30 40 q10 -6 20 0"/><path d="M210 50 q10 -6 20 0"/><path d="M60 230 q10 -6 20 0"/><path d="M200 220 q10 -6 20 0"/>
+        </g>
+        <path d="M40 40 L70 10 L100 40 L86 34 L84 60 L56 60 L54 34 Z" fill="#C9A24B"/>
+        <text x="52" y="26" font-size="9" fill="#6a5320" font-family="Verdana" font-weight="bold">India</text>
+        <g stroke="#FBE9C4" stroke-width="4" fill="none" stroke-linecap="round">
+          <path d="M72 96 v-24"/><path d="M62 82 l10 -12 l10 12"/>
+        </g>
+        <!-- Madagascar alone -->
+        <path d="M150 118 Q168 136 162 186 Q156 216 142 226 Q130 196 134 158 Q138 130 150 118 Z" fill="#D9743B"/>
+        <circle cx="150" cy="172" r="66" fill="none" stroke="#FBE9C4" stroke-width="2" stroke-dasharray="3 7" opacity=".8"/>
+        <text x="106" y="240" font-size="10" fill="#FBE9C4" font-family="Verdana" font-style="italic">all alone at sea</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art flip">
+    <div>
+      <div class="num">Scene 4 · The passengers</div>
+      <h2>Whoever was aboard stayed aboard</h2>
+      <p>Here is a funny thing. Whoever happened to be standing on Madagascar when it floated away became its passengers <em>forever</em>.</p>
+      <p>And back in those days, that meant <strong>dinosaurs</strong>. A fierce, wrinkle-faced hunter stomped through the forests. A long-necked giant munched the treetops. And there was even a frog so enormous it might have snapped at baby dinosaurs for dinner!</p>
+      <div class="aside"><span class="tag">Real names</span>The hunter was <b>Majungasaurus</b>, the giant was the titanosaur <b>Rapetosaurus</b>, and the huge frog was <b>Beelzebufo</b> — the "devil frog."</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="A dinosaur, a long-necked giant, and a giant frog on Madagascar">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#EAD9A8"/>
+        <path d="M0 200 Q150 178 300 200 V260 H0 Z" fill="#C79A53"/>
+        <!-- long neck -->
+        <g fill="#7C9A5A">
+          <ellipse cx="70" cy="176" rx="40" ry="22"/>
+          <path d="M96 168 Q140 150 150 96 Q160 90 158 100 Q150 158 108 182 Z"/>
+          <circle cx="152" cy="98" r="9"/>
+          <rect x="52" y="190" width="8" height="26" rx="3"/><rect x="84" y="190" width="8" height="26" rx="3"/>
+          <path d="M40 178 Q6 178 0 168 Q10 190 42 186 Z"/>
+        </g>
+        <!-- predator -->
+        <g fill="#B4633A" transform="translate(150,120)">
+          <path d="M6 40 Q0 10 26 6 Q54 2 70 20 Q86 24 92 16 Q86 40 66 34 Q60 60 40 66 Q20 74 14 60 Q-2 66 6 40 Z"/>
+          <circle cx="80" cy="16" r="3.4" fill="#2A2A2A"/>
+          <path d="M40 66 l-4 22 l10 0 Z"/><path d="M58 62 l0 24 l10 -2 Z"/>
+          <path d="M14 60 Q-30 62 -44 50 Q-24 74 16 72 Z"/>
+        </g>
+        <!-- devil frog -->
+        <g transform="translate(200,196)" fill="#5E7B3C">
+          <ellipse cx="0" cy="8" rx="30" ry="18"/>
+          <circle cx="-12" cy="-10" r="8"/><circle cx="12" cy="-10" r="8"/>
+          <circle cx="-12" cy="-11" r="3.4" fill="#F4E08A"/><circle cx="12" cy="-11" r="3.4" fill="#F4E08A"/>
+          <circle cx="-12" cy="-11" r="1.6" fill="#2A2A2A"/><circle cx="12" cy="-11" r="1.6" fill="#2A2A2A"/>
+          <path d="M-24 14 q24 12 48 0" fill="none" stroke="#3E5427" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art">
+    <div>
+      <div class="num">Scene 5 · A quiet island</div>
+      <h2>Goodbye, dinosaurs</h2>
+      <p>Then one terrible day, a rock as big as a mountain fell out of the sky and struck the Earth. All over the world the dinosaurs disappeared — on Madagascar too.</p>
+      <p>The island grew very quiet. Suddenly there was lots and lots of empty space, and hardly anyone left to fill it. An empty island, waiting…</p>
+      <div class="aside"><span class="tag">Big number</span>That was <b>66 million years ago</b>. The same asteroid ended the age of dinosaurs everywhere on Earth.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="An asteroid streaking toward a quiet empty island">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#402A3A"/>
+        <circle cx="60" cy="50" r="2" fill="#fff"/><circle cx="120" cy="34" r="1.6" fill="#fff"/><circle cx="250" cy="46" r="2" fill="#fff"/><circle cx="210" cy="24" r="1.4" fill="#fff"/>
+        <!-- asteroid + tail -->
+        <path d="M40 30 L200 150" stroke="#E8B04B" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+        <path d="M60 44 L200 150" stroke="#F6E1A6" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="205" cy="154" r="14" fill="#D9743B"/><circle cx="201" cy="150" r="5" fill="#F6C56A"/>
+        <!-- island -->
+        <path d="M60 214 Q150 190 240 214 L240 240 Q150 226 60 240 Z" fill="#6E5140"/>
+        <path d="M150 214 Q152 196 146 190 Q158 190 156 214 Z" fill="#4E3A2E"/>
+        <text x="92" y="236" font-size="10" fill="#C9B79E" font-family="Verdana" font-style="italic">…empty and waiting</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art flip">
+    <div>
+      <div class="num">Scene 6 · The strangest part</div>
+      <h2>Little rafts across the sea</h2>
+      <p>Now here is the strangest part of the whole story. Every so often, far away on the African coast, a storm would tear a tangle of trees and roots loose and wash it out to sea — a little floating raft, with a frightened animal clinging on top.</p>
+      <p>Most of those tiny sailors were lost to the waves. But <em>once in a very, very long while</em>, a raft drifted all the way across the ocean and bumped into Madagascar. And a small, blinking passenger stepped ashore into an empty land — with the whole island to itself.</p>
+      <p>One of those little travellers was a furry, big-eyed primate. Its great-great-great-(a-million-greats)-grandchildren became the <strong>lemurs</strong>. Other rafts carried the ancestors of the spiky tenrecs, the mice, and the catlike <strong>fossa</strong>.</p>
+      <div class="aside"><span class="tag">Big word</span>Scientists call this lucky sea-crossing <b>rafting</b> (or "sweepstakes dispersal"). Lemur ancestors likely arrived roughly <b>50–60 million years ago</b>.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="A small lemur ancestor riding a raft of tangled vegetation across the sea">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#4FA0C4"/>
+        <rect x="0" y="150" width="300" height="110" fill="#2E7DA1"/>
+        <g stroke="#8FC7DC" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".8">
+          <path d="M20 176 q14 -8 28 0"/><path d="M120 200 q14 -8 28 0"/><path d="M220 182 q14 -8 28 0"/><path d="M70 216 q14 -8 28 0"/>
+        </g>
+        <!-- island in distance -->
+        <path d="M244 150 Q286 140 300 152 L300 150 Z" fill="#D9743B"/>
+        <path d="M250 150 Q288 138 300 150 L300 130 Q270 132 250 150 Z" fill="#C86A34"/>
+        <text x="236" y="126" font-size="8.5" fill="#FBE9C4" font-family="Verdana">Madagascar!</text>
+        <g stroke="#FBE9C4" stroke-width="3" fill="none" stroke-linecap="round"><path d="M170 130 h60"/><path d="M222 122 l10 8 l-10 8"/></g>
+        <!-- raft -->
+        <g transform="translate(80,150)">
+          <ellipse cx="0" cy="8" rx="60" ry="12" fill="#6E4B2E"/>
+          <path d="M-54 4 h108" stroke="#8A6038" stroke-width="4" stroke-linecap="round"/>
+          <path d="M-40 2 q6 -10 14 0" fill="none" stroke="#4E7A51" stroke-width="3"/>
+          <path d="M28 2 q6 -12 14 0" fill="none" stroke="#4E7A51" stroke-width="3"/>
+          <circle cx="42" cy="-2" r="5" fill="#5E8C5E"/><circle cx="-40" cy="-4" r="5" fill="#5E8C5E"/>
+          <!-- lemur passenger -->
+          <g transform="translate(-2,-30)">
+            <ellipse cx="0" cy="16" rx="10" ry="13" fill="#9AA0A9"/>
+            <circle cx="0" cy="0" r="9" fill="#AEB3BB"/>
+            <circle cx="-4" cy="-1" r="3.6" fill="#fff"/><circle cx="4" cy="-1" r="3.6" fill="#fff"/>
+            <circle cx="-4" cy="0" r="1.8" fill="#2A2A2A"/><circle cx="4" cy="0" r="1.8" fill="#2A2A2A"/>
+            <path d="M-9 -7 l-3 -6 l6 3 Z" fill="#3A3A3A"/><path d="M9 -7 l3 -6 l-6 3 Z" fill="#3A3A3A"/>
+            <path d="M9 20 C26 22 28 4 18 -4" fill="none" stroke="#3A3A3A" stroke-width="5" stroke-linecap="round"/>
+            <path d="M9 20 C26 22 28 4 18 -4" fill="none" stroke="#EDEDED" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 5"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art">
+    <div>
+      <div class="num">Scene 7 · A world of their own</div>
+      <h2>They became creatures found nowhere else</h2>
+      <p>With no one else around and a whole island to share, these lucky animals changed and changed and changed — over millions and millions of years — until they became living things you cannot find anywhere else in the whole world.</p>
+      <p>More than a hundred kinds of lemur, leaping through the trees. Chameleons in every colour, rolling their swivelly eyes. And fat, friendly <strong>baobab trees</strong> that look as though they were planted upside down, with their roots waving at the sky.</p>
+      <div class="aside"><span class="tag">Big word</span>When a plant or animal lives in one place and nowhere else, we say it is <b>endemic</b>. About <b>9 out of every 10</b> wild species in Madagascar are endemic.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="A lemur, a chameleon and a baobab tree together">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#EBD9A6"/>
+        <path d="M0 210 Q150 188 300 210 V260 H0 Z" fill="#8FB06A"/>
+        <!-- baobab -->
+        <g transform="translate(60,60)">
+          <path d="M-16 150 C-24 80 -20 44 -8 32 C-18 20 -14 2 2 4 C-6 -10 16 -14 18 2 C34 -4 44 12 30 24 C48 34 42 74 32 150 Z" fill="#8A5A34"/>
+          <g stroke="#6E4526" stroke-width="4" stroke-linecap="round"><path d="M6 22 L-20 0"/><path d="M10 20 L6 -8"/><path d="M14 24 L40 2"/><path d="M0 24 L-30 16"/><path d="M18 26 L44 20"/></g>
+          <circle cx="4" cy="2" r="24" fill="#4E7A51"/><circle cx="-20" cy="10" r="13" fill="#5E8C5E"/><circle cx="30" cy="10" r="13" fill="#5E8C5E"/>
+        </g>
+        <!-- lemur -->
+        <g transform="translate(168,150)">
+          <ellipse cx="0" cy="26" rx="15" ry="20" fill="#9AA0A9"/>
+          <circle cx="0" cy="2" r="13" fill="#AEB3BB"/>
+          <circle cx="-5" cy="0" r="5" fill="#fff"/><circle cx="5" cy="0" r="5" fill="#fff"/>
+          <circle cx="-5" cy="1" r="2.6" fill="#2A2A2A"/><circle cx="5" cy="1" r="2.6" fill="#2A2A2A"/>
+          <path d="M-12 -8 l-4 -9 l8 3 Z" fill="#3A3A3A"/><path d="M12 -8 l4 -9 l-8 3 Z" fill="#3A3A3A"/>
+          <circle cx="0" cy="7" r="2.2" fill="#2A2A2A"/>
+          <path d="M13 34 C44 38 50 4 32 -8" fill="none" stroke="#3A3A3A" stroke-width="7" stroke-linecap="round"/>
+          <path d="M13 34 C44 38 50 4 32 -8" fill="none" stroke="#EDEDED" stroke-width="7" stroke-linecap="round" stroke-dasharray="4 6"/>
+        </g>
+        <!-- chameleon -->
+        <g transform="translate(214,196)" fill="#5FA05A">
+          <path d="M-30 0 Q-10 -20 20 -10 Q30 -8 34 0 Q26 10 20 6 Q-6 16 -30 6 Z"/>
+          <path d="M-30 3 q-12 2 -14 14 q10 -4 16 -8 Z"/>
+          <circle cx="24" cy="-6" r="7" fill="#6FB56A"/><circle cx="24" cy="-6" r="3" fill="#F4E08A"/><circle cx="24" cy="-6" r="1.4" fill="#2A2A2A"/>
+          <path d="M-8 6 v12 M8 4 v12" stroke="#3E7A3A" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 0 q10 4 6 -6" fill="none" stroke="#F4A24A" stroke-width="2.5" stroke-linecap="round"/>
+          <g fill="#3E7A3A" opacity=".5"><circle cx="-6" cy="-4" r="2"/><circle cx="6" cy="-6" r="2"/><circle cx="0" cy="0" r="2"/></g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene with-art flip">
+    <div>
+      <div class="num">Scene 8 · Giants and newcomers</div>
+      <h2>Giants — and the last passengers of all</h2>
+      <p>Madagascar even grew <strong>giants</strong>. The elephant bird stood taller than a grown-up and was heavier than an ox, laying eggs bigger than your head. And some lemurs grew as large as gorillas, climbing slowly through the trees.</p>
+      <p>Then, only a few thousand years ago — a blink in this long story — the very last new passengers arrived at last: <strong>people</strong>. And within a short time, sadly, the biggest of the giants were gone forever.</p>
+      <div class="aside"><span class="tag">Names</span>The giant bird was <b>Aepyornis</b>, the elephant bird. The gorilla-sized climber was the giant lemur <b>Archaeoindris</b>. People reached the island within roughly the last few thousand years.</div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 260" role="img" aria-label="A giant elephant bird beside a person for scale, with a huge egg">
+        <rect x="0" y="0" width="300" height="260" rx="16" fill="#F0E2BE"/>
+        <path d="M0 220 H300 V260 H0 Z" fill="#C9A86A"/>
+        <!-- elephant bird big -->
+        <g transform="translate(96,20)" fill="#6E4327">
+          <ellipse cx="0" cy="120" rx="46" ry="40"/>
+          <path d="M16 96 C24 20 60 6 52 40 C48 60 38 82 26 96 Z"/>
+          <circle cx="52" cy="34" r="13"/>
+          <path d="M63 32 l22 -3 l-20 11 Z" fill="#8A5A34"/>
+          <rect x="-14" y="156" width="9" height="40" rx="4"/><rect x="16" y="156" width="9" height="40" rx="4"/>
+          <path d="M-5 196 h20 M11 196 h20" stroke="#6E4327" stroke-width="7" stroke-linecap="round"/>
+        </g>
+        <!-- person for scale -->
+        <g transform="translate(214,120)" fill="#3A2E28">
+          <circle cx="0" cy="0" r="9"/>
+          <rect x="-7" y="10" width="14" height="40" rx="6"/>
+          <rect x="-6" y="48" width="5" height="28" rx="2"/><rect x="2" y="48" width="5" height="28" rx="2"/>
+          <rect x="-16" y="14" width="5" height="26" rx="2" transform="rotate(12 -14 20)"/>
+          <rect x="11" y="14" width="5" height="26" rx="2" transform="rotate(-12 14 20)"/>
+        </g>
+        <text x="196" y="212" font-size="8.5" fill="#6B5A4E" font-family="Verdana">(a person, for size)</text>
+        <!-- egg -->
+        <ellipse cx="250" cy="196" rx="16" ry="21" fill="#FBF3E4" stroke="#C9A86A" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="scene">
+    <div>
+      <div class="num">Scene 9 · Today</div>
+      <h2>Still its own little world</h2>
+      <p>And today? Today Madagascar is <em>still</em> its own little world, floating quietly in the Indian Ocean. Nearly nine out of every ten wild things there — the lemurs, the chameleons, the baobabs, the catlike fossa — live nowhere else on all the Earth.</p>
+      <p>All of it, every leaping lemur and every upside-down tree, because long, long ago an island went sailing away… and kept its very own secret garden of life.</p>
+      <p style="text-align:center;font-style:italic;color:var(--terra);font-size:1.2rem;margin-top:18px;">The End.</p>
+    </div>
+  </section>
+
+  <!-- ============ PARALLEL TIMELINE ============ -->
+  <div class="section-head">
+    <div class="kicker">The Chronological Outline</div>
+    <h2>Two Stories, Side by Side</h2>
+    <p>What the Earth was doing, and who was living on Madagascar, at each step. Read the blue side for the <strong>rocks and continents</strong> and the green side for the <strong>plants and animals</strong>.</p>
+  </div>
+
+  <div class="legend">
+    <span><i class="swatch" style="background:var(--ocean)"></i> The Earth (geology)</span>
+    <span><i class="swatch" style="background:var(--leaf)"></i> Life (plants &amp; animals)</span>
+  </div>
+
+  <div class="tl">
+
+    <div class="row pad-top">
+      <div class="card earth"><h4>The Earth</h4>Madagascar's oldest rocks form deep inside the crust, locked in the heart of a giant supercontinent. No island yet — just a corner of a crowd of joined-up land.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14" fill="#B98E5A"/><path d="M12 20 q8 -8 16 0" stroke="#7A5A33" stroke-width="2.5" fill="none"/></svg>
+      </div>
+      <div class="when">~3 billion – 540 million yrs ago</div>
+      <div class="card life"><h4>Life</h4>Only tiny microbes. No plants, no animals on land anywhere in the world yet.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>Madagascar sits landlocked in the middle of the supercontinent <strong>Gondwana</strong>, snug between Africa and India. First ice sheets, then warm coal swamps.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M8 14 q12 -6 24 0 q4 12 -12 20 q-16 -8 -12 -20Z" fill="#6FA06B"/></svg>
+      </div>
+      <div class="when">~250 million yrs ago</div>
+      <div class="card life"><h4>Life</h4>Early reptiles and amphibians, ferns, mossy forests. The same kinds live across all of Gondwana, because the lands are still joined and animals can walk between them.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>Gondwana cracks apart. Madagascar (carrying India) tears away from Africa and slides south; the sea floods the gap to make the <strong>Mozambique Channel</strong>.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M6 20 q6 -12 12 0" stroke="#2E7DA1" stroke-width="3" fill="none"/><path d="M22 20 q6 -12 12 0" stroke="#2E7DA1" stroke-width="3" fill="none"/><path d="M18 8 v24" stroke="#1C5D7A" stroke-width="2" stroke-dasharray="3 3"/></svg>
+      </div>
+      <div class="when">~180 million yrs ago</div>
+      <div class="card life"><h4>Life</h4>Dinosaurs, cycads, conifers and tiny early mammals — still the shared Gondwana crowd, because the split has only just begun.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>India rips away and races north (later to raise the Himalayas). Now Madagascar is <strong>truly alone</strong>, an island in the open Indian Ocean.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M18 8 Q26 18 22 34 Q14 24 18 8Z" fill="#D9743B"/><circle cx="20" cy="21" r="15" fill="none" stroke="#1C5D7A" stroke-width="2" stroke-dasharray="2 4"/></svg>
+      </div>
+      <div class="when">~88 million yrs ago</div>
+      <div class="card life"><h4>Life</h4>Whoever was aboard is now stranded forever: dinosaurs like <em>Majungasaurus</em> and the giant <em>Rapetosaurus</em>, the devil frog <em>Beelzebufo</em>, and the first flowers.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>A mountain-sized asteroid strikes the planet. Skies darken worldwide — Madagascar included.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M8 8 L26 24" stroke="#E8B04B" stroke-width="3" stroke-linecap="round"/><circle cx="28" cy="26" r="7" fill="#D9743B"/></svg>
+      </div>
+      <div class="when">66 million yrs ago</div>
+      <div class="card life"><h4>Life</h4>The dinosaurs vanish. The island is left quiet and half-empty, with survivors like reptiles, birds and small creatures — and lots of room to spare.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>Madagascar stays put, ringed by hundreds of kilometres of open sea. Very hard to reach — you can only arrive by luck.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><ellipse cx="20" cy="24" rx="14" ry="5" fill="#6E4B2E"/><circle cx="20" cy="15" r="6" fill="#9AA0A9"/></svg>
+      </div>
+      <div class="when">~60 – 20 million yrs ago</div>
+      <div class="card life"><h4>Life</h4>New animals <strong>raft across the sea</strong> on floating mats of vegetation: ancestors of the <strong>lemurs</strong>, tenrecs, rodents and the fossa. Cut off, they evolve into forms found nowhere else. Baobabs, orchids and chameleons flourish.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>The island looks much as it does now — highland forests, dry spiny woodlands, and coral coasts.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><rect x="17" y="16" width="6" height="18" rx="2" fill="#8A5A34"/><circle cx="20" cy="13" r="9" fill="#4E7A51"/></svg>
+      </div>
+      <div class="when">a few thousand yrs ago</div>
+      <div class="card life"><h4>Life</h4>Giants roam: the elephant bird <em>Aepyornis</em> (biggest bird ever), gorilla-sized giant lemurs, and pygmy hippos. Then <strong>people arrive</strong> — and within a short time the largest animals are gone.</div>
+    </div>
+
+    <div class="row">
+      <div class="card earth"><h4>The Earth</h4>Madagascar is the world's 4th-largest island, still slowly drifting — and even, very gently, cracking again along its length.</div>
+      <div class="node" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M18 6 Q28 18 23 34 Q13 22 18 6Z" fill="#D9743B"/></svg>
+      </div>
+      <div class="when">Today</div>
+      <div class="card life"><h4>Life</h4>Over 100 kinds of lemur, chameleons galore, the fossa, and baobabs — and about <strong>90%</strong> of its wildlife lives nowhere else on Earth.</div>
+    </div>
+
+  </div>
+
+  <!-- ============ FACT STRIP ============ -->
+  <div class="section-head" style="margin-top:56px;">
+    <div class="kicker">Numbers to Remember</div>
+    <h2>The Whole Story in Four Numbers</h2>
+  </div>
+  <div class="facts">
+    <div class="fact"><div class="big">180<span style="font-size:1rem"> Ma</span></div><div class="lbl">years ago the great crack began, splitting Madagascar from Africa</div></div>
+    <div class="fact"><div class="big">88<span style="font-size:1rem"> Ma</span></div><div class="lbl">years ago India let go — Madagascar has been alone ever since</div></div>
+    <div class="fact"><div class="big">100+</div><div class="lbl">kinds of lemur, found only on Madagascar</div></div>
+    <div class="fact"><div class="big">~90%</div><div class="lbl">of Madagascar's wildlife lives nowhere else on Earth</div></div>
+  </div>
+
+  <footer>
+    <div class="rule"></div>
+    <p><strong>The Island That Sailed Away</strong> — a true story of deep time, for reading aloud together.<br>
+    Dates are rounded for the story; "Ma" means "millions of years ago."</p>
+    <p style="margin-top:12px;font-size:.78rem;opacity:.85;">Science it's built on: the breakup of Gondwana (Madagascar–Africa rifting ~180–160 Ma, India–Madagascar split ~88 Ma), Late-Cretaceous Maevarano dinosaurs, Cenozoic "rafting" arrival of lemurs and other mammals, and the recent loss of Madagascar's megafauna.</p>
+  </footer>
+
+</div>
+</body>
+</html>
