@@ -1,7 +1,7 @@
 # arturekert — personal academic website
 
 Plain static HTML + one stylesheet. No build step, no JavaScript, no dependencies.
-GitHub Pages serves the files exactly as they are.
+GitHub Pages serves the files exactly as they are.  
 
 ```
 index.html          Home / About
