@@ -103,13 +103,6 @@ main { max-width: var(--measure); margin: 0 auto; padding: var(--s12) var(--s6) 
 .about { font-size: 20px; line-height: 1.75; margin-bottom: var(--s8); }
 .book { font-size: 16px; color: var(--soft); border-top: 1px solid var(--divider); padding-top: var(--s4); }
 
-/* ── Varia ────────────────────────────────────────────────────────────── */
-.toc { font-size: 14px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--s6); }
-.toc a { text-decoration: none; }
-.varia-sec .section-title { margin-bottom: var(--s2); }
-.sec-lede { color: var(--soft); margin-bottom: var(--s4); }
-.varia-sec .ruled { margin-bottom: var(--s12); }
-
 /* ── Buttons & cards ──────────────────────────────────────────────────── */
 .buttons { display: flex; flex-wrap: wrap; gap: var(--s3); }
 .btn {
