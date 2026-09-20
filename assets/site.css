@@ -145,6 +145,14 @@ table.marks { width: 100%; border-collapse: collapse; font-variant-numeric: tabu
 table.marks td { padding: var(--s2) 0; font-size: 16px; border-bottom: 1px solid var(--divider); }
 table.marks td + td { text-align: right; color: var(--muted); }
 
+/* Past papers: a row of year links */
+.papers { list-style: none; margin: 0 0 var(--s3); padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s2); }
+.papers a {
+  display: block; text-align: center; padding: var(--s2) 0; font-family: var(--font-heading); font-size: 22px;
+  font-variant-numeric: tabular-nums; text-decoration: none; border: 1px solid var(--divider); border-radius: var(--radius);
+}
+.papers a:hover { border-color: var(--accent); background: rgba(182, 130, 53, .08); }
+
 /* ── Archive (native <details>, no JavaScript) ────────────────────────── */
 .archive { border-top: 1px solid var(--divider); }
 .archive details { border-bottom: 1px solid var(--divider); }
