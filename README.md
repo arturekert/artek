@@ -7,13 +7,14 @@ GitHub Pages serves the files exactly as they are.
 index.html          Home / About
 lectures.html       C7.4 Introduction to Quantum Information
 tutorials.html      Merton presentations + archive of past talks
-writings.html       Writings (links into writings/)
+varia.html          Varia: writings, interviews, mentions (links into writings/)
+writings.html       Redirect to varia.html (old URL)
 404.html            Not-found page
 assets/site.css     All styling (colours & fonts in :root at the top)
 assets/fonts/       Cormorant Garamond + Lora, self-hosted woff2
 assets/img/         Portrait
 assets/favicon.svg  "AE" monogram
-writings/           PDFs and standalone essays linked from writings.html
+writings/           PDFs and standalone essays linked from varia.html
 .nojekyll           Tells GitHub Pages to serve files as-is (skip Jekyll)
 ```
 
@@ -41,7 +42,7 @@ Tick "Enforce HTTPS" once the certificate is issued.
 
 ## Everyday edits
 
-- **Add a writing:** copy one `<li class="work">…</li>` block in `writings.html`,
+- **Add a writing:** copy one `<li class="work">…</li>` block in the right section of `varia.html`,
   change title, link, venue, note. Put local files (PDF/HTML) in `writings/`.
 - **New academic year of talks (tutorials.html):** move the talks under
   "This year's talks" into a new `<details>` block at the top of the archive
