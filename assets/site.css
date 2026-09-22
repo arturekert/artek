@@ -103,6 +103,7 @@ main { max-width: var(--measure); margin: 0 auto; padding: var(--s12) var(--s6) 
   width: 100%; height: auto; background: #0d0f1c; border-radius: var(--radius);
   box-shadow: 0 1px 2px rgba(32, 31, 29, .08), 0 12px 32px -12px rgba(32, 31, 29, .35);
 }
+.hero .credit { margin-top: var(--s2); text-align: right; font-size: 13px; letter-spacing: .02em; color: var(--muted); }
 .home { max-width: 700px; padding-top: var(--s12); }
 .about { font-size: 20px; line-height: 1.75; margin-bottom: var(--s8); }
 .book { font-size: 16px; color: var(--soft); border-top: 1px solid var(--divider); padding-top: var(--s4); }
@@ -218,6 +219,7 @@ table.marks td + td { text-align: right; color: var(--muted); }
   .site-header .inner, main, .site-footer .inner { padding-left: var(--s4); padding-right: var(--s4); }
   .hero { margin-top: 0; padding: 0; }
   .hero img { border-radius: 0; box-shadow: none; }
+  .hero .credit { padding: 0 var(--s4); }
   .site-nav { gap: var(--s3); flex-wrap: wrap; }
   .site-nav a { font-size: 13px; letter-spacing: .06em; }
 }
